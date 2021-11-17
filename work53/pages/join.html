@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no" />
+	<title>Rogpet - login</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+</head>
+<body>
+
+	<div id="wrap">
+		<header id="header">
+			<div id="hamburger" class="ham_btn"><span></span><span></span><span></span></div>
+			<h1 class="logo"><a href=""><img src="../assets/images/logo.png" alt="logo"></a></h1>
+			<a href="" class="btn_my"><img src="../assets/images/top_menu.png" alt="mall"></a>
+		</header>
+
+		<div id="container">
+			<div id="content" class="join">
+                <h3>회원가입</h3>
+				<div class="form_wrap">
+                    <form action="" class="form_ty01">
+                        <div class="row">
+                            <label for="">ID</label>
+                            <input type="text">
+                        </div>
+                        <div class="row pw">
+                            <label for="">Password</label>
+                            <div class="pw_input">
+                                <input type="password">
+                                <span class="showhide"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="">Name</label>
+                            <input type="text">
+                        </div>
+                        <div class="row">
+                            <label for="">Email</label>
+                            <input type="email">
+                        </div>
+                        <div class="row">
+                            <label for="">Address</label>
+                            <input type="text">
+                        </div>
+                        <div class="row">
+                            <label for="">Phone number</label>
+                            <input type="text">
+                        </div>
+                        <!-- <div class="row">
+                            <label for="">Pet 분류</label>
+                            <div class="custom-select">
+                                <select>
+                                  <option value="0">반려동물 분류를 선택해주세요</option>
+                                  <option value="1">강아지</option>
+                                  <option value="2">고양이</option>
+                                  <option value="3">햄스터</option>
+                                  <option value="4">조류</option>
+                                  <option value="1">강아지</option>
+                                  <option value="2">고양이</option>
+                                  <option value="3">햄스터</option>
+                                  <option value="4">조류</option>
+                                  <option value="1">강아지</option>
+                                  <option value="2">고양이</option>
+                                  <option value="3">햄스터</option>
+                                  <option value="4">조류</option>
+                                  <option value="1">강아지</option>
+                                  <option value="2">고양이</option>
+                                  <option value="3">햄스터</option>
+                                  <option value="4">조류</option>
+                                </select>
+                              </div>
+                        </div>
+                        <div class="row">
+                            <label for="">Pet 종</label>
+                            <input type="text">
+                        </div>
+                        <div class="row">
+                            <label for="">컬러</label>
+                            <input type="text">
+                        </div>
+                        <div class="row">
+                            <label for="">성별</label>
+                            <div class="radio_wrap">
+                                <div class="check_ty01">
+                                    <input type="radio" name="gender" id="gender1">
+                                    <label for="gender1">남성</label>
+                                </div>
+                                <div class="check_ty01">
+                                    <input type="radio" name="gender" id="gender2">
+                                    <label for="gender2">여성</label>
+                                </div>
+                                <div class="check_ty01">
+                                    <input type="radio" name="gender" id="gender3">
+                                    <label for="gender3">중성</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="">나이</label>
+                            <input type="text">
+                        </div> -->
+                        <div class="row agree_wrap">
+                            <div class="check_ty02">
+                                <input type="checkbox" name="agree" id="agree1">
+                                <label for="agree1">이용 약관에 동의합니다. <span class="terms01_btn">이용약관 보기</span> </label>
+                            </div>
+                            <div class="check_ty02">
+                                <input type="checkbox" name="agree" id="agree2">
+                                <label for="agree2">개인정보 수집에 동의합니다. <span class="terms02_btn">수집동의 보기</span> </label>
+                            </div>
+                        </div>
+                        <button type="submit">회원가입</button>
+                    </form>
+                    <p class="comment">이미 회원이신가요? <a href="">Log In</a></p>
+                </div>
+			</div>
+		</div>
+
+		<footer id="bottomMenu">
+			<ul class="category">
+				<li class="active"><a href="">진료예약</a></li>
+				<li><a href="">펫상담실</a></li>
+				<li><a href="">펫스타그램</a></li>
+				<li><a href="">Pet Mall</a></li>
+				<li><a href="">Mypage</a></li>
+			</ul>
+		</footer>
+	</div>
+
+
+	<!-- 이용약관 팝업 -->
+	<div class="layer_popup terms01">
+		<div class="popup">
+			<h5 class="popup_header">
+				이용약관
+				<a href="" class="btn_close">&times;</a>
+			</h5>
+			<div class="popup_content">
+                <div class="box">
+                로그펫 서비스 이용약관<br><br>
+
+                제 1조 (목적)<br>
+                이 약관은 (주)인트로렙스 or 로그펫 운영하는 로그펫(http://rogpet.com/) 사이트 (이하 “로그펫”이라 한다)에서 제공하는 온·오프라인 서비스(이하 “서비스”라 한다)의 이용조건 및 절차에 관한 기본사항을 정하는데 목적이 있습니다.
+                <br><br>
+                제 2조 (정의)<br>
+                1. 이 약관에서 사용하는 용어의 의미는 다음 각 호와 같습니다. 아래 각 호에서 정의되지 않은 이 약관상의 용어의 의미는 “로그펫” 이용약관 및 일반적인 거래관행에 의합니다.<br>
+                - “로그펫”은 반려동물 정보 기준으로 상담, 재화, 제반서비스를 운영하는 사업자를 말하며, 아울러 재화 또는 용역을 사용자에게 제공하기 위하여 컴퓨터 등 정보통신설비를 이용하여 재화 또는 용역을 거래할 수 있도록 설정한 가상의 영업장 및 사이버몰 운영하는 사업자의 의미로도 사용합니다.<br>
+                - "고객"이란 "로그펫"을 이용하는 이용자를 말합니다.<br>
+                - "회원"이란 회사에 개인정보를 제공하고 회원등록을 한 자로서, "로그펫"의 정보를 지속적으로 제공받으며, "로그펫"의 "서비스"를 계속적으로 이용할 수 있는 자를 말합니다.<br>
+                - "비회원"이라 함은 "회원"으로 가입하지 않고 "로그펫"이 제공하는 "서비스"를 이용하는 자를 말합니다.<br>
+                - "반려동물서비스제공자"라 함은 수의사 및 반려동물관련 서비스업체 등 "로그펫" 내에서 "서비스"제공을 하는 자를 말합니다.<br>
+                - 이 약관은 관계 법령 등에서 정하는 바에 따릅니다.<br>
+                <br>
+                제 3조 (회원 계약의 체결)<br>
+                1. 가입신청인이 본 약관을 읽고 "동의" 버튼을 누르거나 "확인" 등에 체크하는 방법을 취한 경우 본 약관에 동의한 것으로 간주합니다.<br>
+                2. 로그펫은 제 1항의 가입신청과 관련하여 가입신청인에게 전문기관을 통한 실명확인 및 본인인증을 요청할 수 있습니다.<br>
+                3. 가입신청인은 의 요청에 따라 본인의 개인정보 중 필수 항목 (성명, 생년월일, 성별, 주소, 아이디, 비밀번호, 닉네임, 전화번호, 전자우편 주소)를 제공하여야합니다.<br>
+                4. 가입신청인은 이용하려는 로그펫의 서비스에 따라 반려동물 정보 중 필수 항목(품종,나이, 성별, 중성화 여부, 접종 여부 등)을 제공하여야 합니다.<br>
+                5. 로그펫은 가입신청인의 서비스 이용 신청에 대해 승낙함을 원칙으로 합니다. 다만 회사는 다음 각 호에 해당하는 신청에 대하여는 승낙을 하지 않거나 사후에 회원계약을 해지할 수 있습니다.<br>
+                - 실명이 아니거나 타인의 명의를 사용한 경우<br>
+                - 가입신청인이 회원가입일 이전에 이 약관에 의하여 회원자격을 상실한 적이 있는 경우, 단 회사의 회원 재가입 승낙을 얻은 경우에는 예외로 함.<br>
+                - 허위 정보를 기재하거나 회사가 제시한 필수 항목을 기재하지 않은 경우<br>
+                - 이용자가 부정한 용도로 서비스를 이용하는 경우<br>
+                - 관계법령에 위배되거나 선량한 풍속 기타 사회질서를 저해할 수 있는 목적으로 신청한 경우<br>
+                - 기타 이용자의 귀책사유로 인하여 승인이 불가능하거나 기타 제반 사항을 위반하여 신청한 경우<br>
+                - 회사는 서비스 관련 설비의 여유가 없거나, 기술상 또는 업무상 문제가 있는 경우에는 승낙을 유보할 수 있습니다.<br>
+                - 제5항 또는 제 6항에 따라 회원가입신청의 승낙을 하지 아니하거나 유보한 경우, 회사는 원칙적으로 가입신청인에게 그 사실을 알리도록 합니다.<br>
+                - 회원계약의 체결 시기는 가입 신청인이 제1항과 같이 동의한 후, 회사가 정한 온라인 회원가입 신청서에 회원 ID를 포함한 필수사항을 입력하고, "가입하기" 내지 "확인" 버튼을 누른 시점으로 합니다.<br>
+            </div>
+            </div>
+		</div>
+        <div class="layer_popup_dim"></div>
+	</div>
+	<!-- // 이용약관 팝업 -->
+
+    <!-- 수집동의 팝업 -->
+	<div class="layer_popup terms02">
+		<div class="popup">
+			<h5 class="popup_header">
+				수집동의 약관
+				<a href="" class="btn_close">&times;</a>
+			</h5>
+			<div class="popup_content">
+                <div class="box">
+                로그펫 서비스 수집동의 약관<br><br>
+
+                제 1조 (목적)<br>
+                이 약관은 (주)인트로렙스 or 로그펫 운영하는 로그펫(http://rogpet.com/) 사이트 (이하 “로그펫”이라 한다)에서 제공하는 온·오프라인 서비스(이하 “서비스”라 한다)의 이용조건 및 절차에 관한 기본사항을 정하는데 목적이 있습니다.
+                <br><br>
+                제 2조 (정의)<br>
+                1. 이 약관에서 사용하는 용어의 의미는 다음 각 호와 같습니다. 아래 각 호에서 정의되지 않은 이 약관상의 용어의 의미는 “로그펫” 이용약관 및 일반적인 거래관행에 의합니다.<br>
+                - “로그펫”은 반려동물 정보 기준으로 상담, 재화, 제반서비스를 운영하는 사업자를 말하며, 아울러 재화 또는 용역을 사용자에게 제공하기 위하여 컴퓨터 등 정보통신설비를 이용하여 재화 또는 용역을 거래할 수 있도록 설정한 가상의 영업장 및 사이버몰 운영하는 사업자의 의미로도 사용합니다.<br>
+                - "고객"이란 "로그펫"을 이용하는 이용자를 말합니다.<br>
+                - "회원"이란 회사에 개인정보를 제공하고 회원등록을 한 자로서, "로그펫"의 정보를 지속적으로 제공받으며, "로그펫"의 "서비스"를 계속적으로 이용할 수 있는 자를 말합니다.<br>
+                - "비회원"이라 함은 "회원"으로 가입하지 않고 "로그펫"이 제공하는 "서비스"를 이용하는 자를 말합니다.<br>
+                - "반려동물서비스제공자"라 함은 수의사 및 반려동물관련 서비스업체 등 "로그펫" 내에서 "서비스"제공을 하는 자를 말합니다.<br>
+                - 이 약관은 관계 법령 등에서 정하는 바에 따릅니다.<br>
+                <br>
+                제 3조 (회원 계약의 체결)<br>
+                1. 가입신청인이 본 약관을 읽고 "동의" 버튼을 누르거나 "확인" 등에 체크하는 방법을 취한 경우 본 약관에 동의한 것으로 간주합니다.<br>
+                2. 로그펫은 제 1항의 가입신청과 관련하여 가입신청인에게 전문기관을 통한 실명확인 및 본인인증을 요청할 수 있습니다.<br>
+                3. 가입신청인은 의 요청에 따라 본인의 개인정보 중 필수 항목 (성명, 생년월일, 성별, 주소, 아이디, 비밀번호, 닉네임, 전화번호, 전자우편 주소)를 제공하여야합니다.<br>
+                4. 가입신청인은 이용하려는 로그펫의 서비스에 따라 반려동물 정보 중 필수 항목(품종,나이, 성별, 중성화 여부, 접종 여부 등)을 제공하여야 합니다.<br>
+                5. 로그펫은 가입신청인의 서비스 이용 신청에 대해 승낙함을 원칙으로 합니다. 다만 회사는 다음 각 호에 해당하는 신청에 대하여는 승낙을 하지 않거나 사후에 회원계약을 해지할 수 있습니다.<br>
+                - 실명이 아니거나 타인의 명의를 사용한 경우<br>
+                - 가입신청인이 회원가입일 이전에 이 약관에 의하여 회원자격을 상실한 적이 있는 경우, 단 회사의 회원 재가입 승낙을 얻은 경우에는 예외로 함.<br>
+                - 허위 정보를 기재하거나 회사가 제시한 필수 항목을 기재하지 않은 경우<br>
+                - 이용자가 부정한 용도로 서비스를 이용하는 경우<br>
+                - 관계법령에 위배되거나 선량한 풍속 기타 사회질서를 저해할 수 있는 목적으로 신청한 경우<br>
+                - 기타 이용자의 귀책사유로 인하여 승인이 불가능하거나 기타 제반 사항을 위반하여 신청한 경우<br>
+                - 회사는 서비스 관련 설비의 여유가 없거나, 기술상 또는 업무상 문제가 있는 경우에는 승낙을 유보할 수 있습니다.<br>
+                - 제5항 또는 제 6항에 따라 회원가입신청의 승낙을 하지 아니하거나 유보한 경우, 회사는 원칙적으로 가입신청인에게 그 사실을 알리도록 합니다.<br>
+                - 회원계약의 체결 시기는 가입 신청인이 제1항과 같이 동의한 후, 회사가 정한 온라인 회원가입 신청서에 회원 ID를 포함한 필수사항을 입력하고, "가입하기" 내지 "확인" 버튼을 누른 시점으로 합니다.<br>
+                </div>
+            </div>
+		</div>
+        <div class="layer_popup_dim"></div>
+	</div>
+	<!-- // 수집동의 팝업 -->
+
+
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            // 비밀번호보기
+            $('.join .showhide').click(function() {
+                if($(this).hasClass('hide')) {
+                    $(this).removeClass('hide')
+                    $('.join .pw_input input').attr('type', 'password');
+                }else {
+                    $(this).addClass('hide')
+                    $('.join .pw_input input').attr('type', 'text');
+                }
+            });
+
+            // 약관보기 (레이어팝업)
+            $('.terms01_btn').click(function() {
+                $('.terms01').show();
+            })
+            $('.terms02_btn').click(function() {
+                $('.terms02').show();
+            });
+
+
+        })
+
+
+    </script>
+
+</body>
+</html>

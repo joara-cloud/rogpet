@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<title>Rogpet - login</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/swiper.css">
+        <!-- css -->
+<link rel="stylesheet" type="text/css" href="../assets/css/daterangepicker.css" />
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+ 
+
+    <style>
+        #header {position:absolute;left:0;top:0;width:100%}
+    </style>
+</head>
+<body>
+
+	<div id="wrap">
+		<header id="header">
+			<div class="btn_back"><img src="../assets/images/arrow-left@2x.png" alt="뒤로가기"></div>
+			<!-- <h1 class="logo"><a href=""><img src="../assets/images/logo.png" alt="logo"></a></h1> -->
+			<a href="" class="btn_my"><img src="../assets/images/top_menu_white@2x.png" alt="mall"></a>
+		</header>
+
+		<div id="container">
+			<div id="content" class="hospital_02 reservation">
+                <div class="center_thumb">
+                    <img src="../assets/images/no_img2@2x.png" alt="">
+                </div>
+                <div class="title_area">
+                    <h4>어서와펫호텔</h4>
+                    <p>경기고등학교 정문에서 100m</p>
+                </div>
+                <div class="calender">
+                    <div class="c_inner">
+                        <strong class="month">09</strong>
+                        <div class="days">
+                            <span>MON</span>
+                            <span>TUE</span>
+                            <span>WEB</span>
+                            <span>THU</span>
+                            <span>FRI</span>
+                            <span>SAT</span>
+                            <span>SUN</span>
+                        </div>
+                        <div class="relative">
+                            <div class="swiper-container">
+                                <!-- class => 시작일: start_day / 중간: gap / 종료일: end_day -->
+                                <!-- <div class="swiper-wrapper">
+                                    <div class="swiper-slide day"><span>1</span></div>
+                                    <div class="swiper-slide day start_day"><span>10</span></div>  
+                                    <div class="swiper-slide day gap"><span>11</span></div>
+                                    <div class="swiper-slide day gap"><span>12</span></div>
+                                    <div class="swiper-slide day end_day"><span>13</span></div>
+                                    <div class="swiper-slide day"><span>14</span></div>
+                                    <div class="swiper-slide day"><span>15</span></div>
+                                    <div class="swiper-slide day"><span>16</span></div>
+                                </div> -->
+                                <div class="weekend day_wrap">
+                                    <div class="day"><span>1</span></div>
+                                    <div class="day"><span>10</span></div>  
+                                    <div class="day"><span>11</span></div>
+                                    <div class="day"><span>12</span></div>
+                                    <div class="day"><span>13</span></div>
+                                    <div class="day"><span>14</span></div>
+                                    <div class="day"><span>15</span></div>
+                                    <div class="day"><span>16</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <input type="text" name="dates"> -->
+                    </div>
+                </div>
+                <div class="inner">
+                    <div class="time">
+                        <h5>룸 컨디션<p>* 기준 Kg 수에 따라 추가요금 부가 됩니다.</p></h5>
+                        <ul class="time_list select_list">
+                            <li class="active">프리미엄</li>
+                            <li>2견 1실</li>
+                            <li>일반실</li>
+                        </ul>
+                    </div>
+                    <div class="kind">
+                        <h5>부가서비스</h5>
+                        <ul class="kind_list">
+                            <li class="active">위생미용</li>
+                            <li>목욕</li>
+                            <li>버블스파</li>
+                            <li>단독산책</li>
+                            <li class="etc input_ty01"><span>기타</span><input type="text" placeholder="갑자기 움직임이 둔하고, 먹지도 않아요."></li>
+                        </ul>
+                    </div>
+                    <!-- <div class="input_ty01"><span>기타</span><input type="text" placeholder="갑자기 움직임이 둔하고, 먹지도 않아요."></div> -->
+
+                    <button type="button" class="btn_ty01 btn_reservation">예약하기</button>
+                </div>
+			</div>
+		</div>
+
+		<footer id="bottomMenu">
+			<ul class="category">
+				<li class="active"><a href="">진료예약</a></li>
+				<li><a href="">펫상담실</a></li>
+				<li><a href="">펫스타그램</a></li>
+				<li><a href="">Pet Mall</a></li>
+				<li><a href="">Mypage</a></li>
+			</ul>
+		</footer>
+	</div>
+
+    <script src="../assets/js/jquery.js"></script>
+	<script src="../assets/js/swiper.js"></script>
+    <!-- js -->
+    <script type="text/javascript" src="../assets/js/moment.min.js"></script>
+    <script type="text/javascript" src="../assets/js/daterangepicker.js"></script>
+	<script src="../assets/js/common.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+
+            $(document).on('click', '.kind_list > li', function() {
+                $('.kind_list > li').removeClass('active')
+                $(this).addClass('active')
+            })
+            $(document).on('click', '.time_list > li', function() {
+                $('.time_list > li').removeClass('active')
+                $(this).addClass('active')
+            })
+
+            $('.hospital_02 .calender .day').click(function() {
+                // console.log('sdjfio');
+            });
+
+
+            function lastWeek(start, end) {
+
+                var today = start ? start : new Date();
+                var yesterday = new Date(today.setDate(today.getDate()));
+                var weekend = 7; // 일주일 기준
+
+                $('.hospital_02 .calender .day').removeClass('end_day gap')
+
+                for(var i=0; i<weekend; i++) {
+                    if(i===0) {
+                        yesterday.setDate(yesterday.getDate());
+                    }else {
+                        yesterday.setDate(yesterday.getDate() + 1);
+                    }
+
+                    var yText = yesterday+'';
+                    var eText = end+'';
+                    var sText = start+'';
+
+                    var a = yText.substr(0, 15)
+                    var endText = eText.substr(0, 15)
+                    var startText = sText.substr(0, 15)
+                    
+                    if(a == endText) {
+                        $('.hospital_02 .calender .day').eq(i).addClass('end_day');
+                    }else if(yesterday < end) {
+                        $('.hospital_02 .calender .day').eq(i).addClass('gap');
+                    }
+                    
+                    if(a == startText) {
+                        $('.hospital_02 .calender .day').eq(i).addClass('start_day');
+                    }
+
+                    // $('.hospital_02 .calender .day > *').eq(i).html(yesterday.getDay());
+                    var week = ["일", "월", "화", "수", "목", "금", "토"];
+
+                    $('.reservation .calender .days span').eq(i).html(week[yesterday.getDay()]);
+                    $('.hospital_02 .calender .day > *').eq(i).html(yesterday.getDate());
+                }
+                $('.hospital_02 .calender .month').html(today.getMonth()+1);
+
+            }
+            lastWeek()
+
+
+
+            var date2 = new Date();
+            date2.setDate(date2.getDate());
+            $('.day_wrap').daterangepicker({
+                locale: {
+                    "separator": " ~ ",                     // 시작일시와 종료일시 구분자
+                    "format": 'YYYY-MM-DD',     // 일시 노출 포맷
+                    "applyLabel": "확인",                    // 확인 버튼 텍스트
+                    "cancelLabel": "취소",                   // 취소 버튼 텍스트
+                    "daysOfWeek": ["일", "월", "화", "수", "목", "금", "토"],
+                    "monthNames": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+                },
+                // timePicker: true,                        // 시간 노출 여부
+                // showDropdowns: true,                     // 년월 수동 설정 여부
+                autoApply: true,                         // 확인/취소 버튼 사용여부
+                timePicker24Hour: true,                  // 24시간 노출 여부(ex> true : 23:50, false : PM 11:50)
+                timePickerSeconds: true,                 // 초 노출 여부
+                // singleDatePicker: true                   // 하나의 달력 사용 여부
+                minDate: date2
+            });
+
+            $("#txtDate").on('show.daterangepicker', function (ev, picker) {
+                $(".yearselect").css("float", "left");
+                $(".monthselect").css("float", "right");
+                $(".cancelBtn").css("float", "right");
+            })
+
+            $('.day_wrap').on('show.daterangepicker', function(ev, picker) {
+                //do something, like clearing an input
+                $('body').append('<div class="daterangepicker_dim"></div>')
+            });
+            $('.day_wrap').on('hide.daterangepicker', function(ev, picker) {
+                //do something, like clearing an input
+                var start = picker.startDate._d
+                var end = picker.endDate._d
+                lastWeek(start, end);
+                $('.daterangepicker_dim').remove()
+            });
+        })
+    </script>
+</body>
+</html>

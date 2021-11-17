@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no" />
+	<title>Rogpet - login</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/swiper.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <style>
+        #header {position:absolute;left:0;top:0;width:100%}
+    </style>
+</head>
+<body>
+
+	<div id="wrap">
+		<header id="header">
+			<div class="btn_back"><img src="../assets/images/arrow-left@2x.png" alt="뒤로가기"></div>
+			<!-- <h1 class="logo"><a href=""><img src="../assets/images/logo.png" alt="logo"></a></h1> -->
+			<a href="" class="btn_my"><img src="../assets/images/top_menu_white@2x.png" alt="mall"></a>
+		</header>
+
+		<div id="container">
+			<div id="content" class="diagnosis_02 reservation">
+                <div class="center_thumb">
+                    <img src="../assets/images/no_img2@2x.png" alt="">
+                </div>
+                <div class="title_area">
+                    <h4>스마트 동물병원</h4>
+                    <p>삼성동 2번출구 400m</p>
+                    <button type="button" class="like">
+                        <img src="../assets/images/icon@2x.png" alt="좋아요" class="off">
+                        <img src="../assets/images/icon_on@2x.png" alt="좋아요" class="on">
+                        <p>찜하기</p>
+                    </button>
+                </div>
+                <div class="calender">
+                    <div class="days">
+                        <span>MON</span>
+                        <span>TUE</span>
+                        <span>WEB</span>
+                        <span>THU</span>
+                        <span>FRI</span>
+                        <span>SAT</span>
+                        <span>SUN</span>
+                    </div>
+                    <div class="day_wrap">
+                        <div class="day active"><span>1</span></div>
+                        <div class="day"><span>2</span></div>
+                        <div class="day"><span>3</span></div>
+                        <div class="day"><span>4</span></div>
+                        <div class="day"><span>5</span></div>
+                        <div class="day"><span>6</span></div>
+                        <div class="day"><span>7</span></div>
+                    </div>
+                </div>
+                <div class="inner">
+                    <div class="doctor">
+                        <div class="thumb"><img src="../assets/images/avatar@2x.png" alt=""></div>
+                        <dl>
+                            <dt>김헨리</dt>
+                            <dd>원장선생님 / 강아지 전문의 / 매주 화요일 휴무</dd>
+                        </dl>
+                    </div>
+                    <div class="time">
+                        <div class="swiper-container select_list_wrap">
+                            <ul class="swiper-wrapper time_list select_list">
+                                <li class="swiper-slide active">09 : 00</li>
+                                <li class="swiper-slide">09 : 30</li>
+                                <li class="swiper-slide">10 : 00</li>
+                                <li class="swiper-slide">10 : 30</li>
+                                <li class="swiper-slide">11 : 00</li>
+                                <li class="swiper-slide">11 : 30</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt_30 kind">
+                        <h5>진료종류</h5>
+                        <ul class="kind_list">
+                            <li class="">예방접종</li>
+                            <li>구강검진</li>
+                            <li>피부질환</li>
+                            <li>외부기생충</li>
+                            <li class="etc active"><span>기타</span><input type="text" placeholder="갑자기 움직임이 둔하고, 먹지도 않아요."></li>
+                        </ul>
+                    </div>
+                    <div class="mt_30 detail_info">
+                        <h5>상세정보</h5>
+                        <div class="dl_wrap">
+                            <dl>
+                                <dt>운영시간</dt>
+                                <dd>
+                                    월 - 금  10:00 ~ 19:00<br>토,일, 공휴일  10:00 ~ 17:00
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>휴일</dt>
+                                <dd>명절 당일 휴무</dd>
+                            </dl>
+                            <dl>
+                                <dt>연락처</dt>
+                                <dd>02-123-4567</dd>
+                            </dl>
+                            <dl>
+                                <dt>병원소개</dt>
+                                <dd>#슬개골탈구 #백내장  전문<br>고양이, 강아지 의료진 구분</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <button type="button" class="btn_ty01 btn_reservation">예약하기</button>
+                </div>
+			</div>
+		</div>
+
+		<footer id="bottomMenu">
+			<ul class="category">
+				<li class="active"><a href="">진료예약</a></li>
+				<li><a href="">펫상담실</a></li>
+				<li><a href="">펫스타그램</a></li>
+				<li><a href="">Pet Mall</a></li>
+				<li><a href="">Mypage</a></li>
+			</ul>
+		</footer>
+	</div>
+
+    <script src="../assets/js/jquery.js"></script>
+	<script src="../assets/js/swiper.js"></script>
+	<script src="../assets/js/common.js"></script>
+    <script src="../assets/js/content.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 날짜 슬라이드
+            // var dateSwiper = new Swiper(".diagnosis_02 .day_wrap", {
+            //     slidesPerView: 7,
+            //     slidesPerGroup: 7,
+            //     navigation: {
+            //         nextEl: ".diagnosis_02 .day_wrap .swiper-button-next",
+            //         prevEl: ".diagnosis_02 .day_wrap .swiper-button-prev",
+            //     },
+            // });
+
+            // 시간 슬라이드
+            var timeSwiper = new Swiper(".diagnosis_02 .select_list_wrap", {
+                slidesPerView: 4,
+                // slidesPerGroup: 7,
+                // navigation: {
+                //     nextEl: ".diagnosis_02 .select_list_wrap .swiper-button-next",
+                //     prevEl: ".diagnosis_02 .select_list_wrap .swiper-button-prev",
+                // },
+            });
+            $(document).on('click', '.reservation .calender .swiper-slide', function() {
+                $('.reservation .calender .swiper-slide').removeClass('active')
+                $(this).addClass('active')
+            })
+            $(document).on('click', '.kind_list > li', function() {
+                $('.kind_list > li').removeClass('active')
+                $(this).addClass('active')
+            })
+            $(document).on('click', '.time_list > li', function() {
+                $('.time_list > li').removeClass('active')
+                $(this).addClass('active')
+            });
+
+
+        })
+    </script>
+</body>
+</html>

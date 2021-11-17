@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no" />
+	<title>Rogpet</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/swiper.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<body>
+
+	<div id="wrap">
+		<header id="header">
+			<div id="hamburger" class="ham_btn"><span></span><span></span><span></span></div>
+			<h1 class="logo"><a href=""><img src="./assets/images/logo.png" alt="logo"></a></h1>
+			<a href="" class="btn_my"><img src="./assets/images/top_menu.png" alt="mall"></a>
+		</header>
+
+		<div id="container">
+			<div id="main">
+				<div class="keyvisual">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="./assets/images/main_slide1.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="./assets/images/main_slide1.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+				<div class="menu_01">
+					<ul class="justify_center">
+						<li><a href="" class="before_icon"><p>진료예약</p></a></li>
+						<li><a href="" class="before_icon"><p>호텔예약</p></a></li>
+						<li><a href="" class="before_icon"><p>뷰티예약</p></a></li>
+						<li><a href="" class="before_icon"><p>돌봄예약</p></a></li>
+					</ul>
+				</div>
+				<div class="menu_02">
+					<ul class="justify_center">
+						<li><a href=""><img src="./assets/images/menu5@2x.png" alt=""> 펫상담센터</a></li>
+						<li><a href=""><img src="./assets/images/menu6@2x.png" alt=""> 펫줌상담실</a></li>
+					</ul>
+				</div>
+				<div class="middle_banner">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="./assets/images/banner.png" alt=""></div>
+							<div class="swiper-slide"><img src="./assets/images/banner.png" alt=""></div>
+							<div class="swiper-slide"><img src="./assets/images/banner.png" alt=""></div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+				<div class="petstargram">
+					<h3>펫스타그램<img src="./assets/images/icon.png" alt=""></h3>
+					<ul>
+						<li><a href=""><img src="./assets/images/pet1@2x.png" alt=""></a></li>
+						<li><a href=""><img src="./assets/images/pet2@2x.png" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<footer id="bottomMenu">
+			<ul class="category">
+				<li class="active"><a href="">진료예약</a></li>
+				<li><a href="">펫상담실</a></li>
+				<li><a href="">펫스타그램</a></li>
+				<li><a href="">Pet Mall</a></li>
+				<li><a href="">Mypage</a></li>
+			</ul>
+		</footer>
+	</div>
+
+	<!-- 하단 레이어팝업 -->
+	<div id="layerPopupMy" class="layerpopup">
+
+		<!-- s: Rogpet_Main – 2 마이페이지 -->
+		<div class="layer_mypage">
+			<div class="inner">
+				<div class="profile_wrap">
+					<div class="thumb">
+						<img src="./assets/images/avatar@2x.png" alt="썸네일">
+						<a href="" class="modify"><img src="./assets/images/icn_edit@2x.png" alt=""></a>
+					</div>
+					<div class="info">
+						<h5>댕댕이</h5>
+						<ul class="follow">
+							<li>팔로우 <strong>0</strong></li>
+							<li>팔로우 <strong>0</strong></li>
+						</ul>
+						<p>친구 초대하고 <span>5,000P</span> 받기</p>
+					</div>
+					<div class="switch">
+						<span>나의 동네</span>
+						<input type="checkbox" id="switch1" name="switch1" class="input__on-off">
+						<label for="switch1" class="label__on-off">
+							<span class="marble"></span>
+							<span class="on"></span>
+							<span class="off"></span>
+						</label>
+					</div>
+					<div class="alert">
+						<img src="./assets/images/icon_alert@2x.png" alt="">
+						<span>1</span>
+					</div>
+				</div>
+				<div class="searchbar_ty01"><input type="text" placeholder="통합검색 (병원명, 지역명, 검색어 등)"></div>
+				<ul class="my_list">
+					<li><a href=""><img src="./assets/images/my1@2x.png" alt="" style="width:25px">마이 페이지</a></li>
+					<li><a href=""><img src="./assets/images/my2@2x.png" alt="" style="width:25px">예약 센터</a></li>
+					<li><a href=""><img src="./assets/images/menu5@2x.png" alt="" style="width:25px">상담 센터</a></li>
+					<li><a href=""><img src="./assets/images/my4@2x.png" alt="" style="width:27px">펫스타그램</a></li>
+				</ul>
+				<div class="bottom_btns">
+					<a href="" class="email"><img src="./assets/images/email2@2x.png" alt="">문의하기</a>
+					<a href="" class="btn_logout">로그아웃</a>
+				</div>
+			</div>
+		</div>
+		<!-- e: Rogpet_Main – 2 -->
+
+		<!-- s: Rogpet_Main – 3 로그인 -->
+		<div class="layer_login" style="display:none">
+			<div class="inner">
+				<h5>로그인</h5>
+				<div class="form_wrap">
+					<form action="" class="form_ty01">
+						<div class="row">
+							<label for="">ID</label>
+							<input type="text">
+						</div>
+						<div class="row pw">
+							<label for="">Password</label>
+							<div class="pw_input">
+								<input type="password">
+								<span class="showhide"></span>
+							</div>
+						</div>
+						<button type="submit">LOG IN</button>
+					</form>
+					<p>아직도 로그펫 아이디가 없으신가요? <a href="">회원가입</a></p>
+				</div>
+				<div class="bottom_btns">
+					<a href="" class="email"><img src="./assets/images/email@2x.png" alt="">문의하기</a>
+					<a href="" class="btn_login">로그인 / 회원가입</a>
+				</div>
+			</div>
+		</div>
+		<!-- e: Rogpet_Main – 3 -->
+
+		<!-- s: 문의하기 -->
+		<div class="layer_qna">
+			<div class="inner">
+				<h5><img src="./assets/images/email2@2x.png" alt=""> 문의하기</h5>
+				<form action="" class="form_ty02">
+					<input type="text" placeholder="제목을 입력하세요.">
+					<textarea name="" id="" cols="30" rows="10" placeholder="내용을 입력하세요."></textarea>
+					<button type="submit" class="btn_ty01">보내기</button>
+				</form>
+				<div class="bottom_btns">
+					<a href="" class="btn_logout">로그아웃</a>
+				</div>
+			</div>
+		</div>
+		<!-- e: 문의하기 -->
+	</div>
+
+	<script src="./assets/js/jquery.js"></script>
+	<script src="./assets/js/jquery.easing.1.3.js"></script>
+	<script src="./assets/js/swiper.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script>
+		$(document).ready(function() {
+
+
+			// keyvisual
+			var slider01 = new Swiper('#main .keyvisual .swiper-container', {
+				loop: true,
+				autoplay: {
+					delay: 2000,
+				},
+				pagination: {
+					el: '#main .keyvisual .swiper-pagination',
+					clickable: true,
+				}
+			})
+			// 중간배너
+			var slider02 = new Swiper('#main .middle_banner .swiper-container', {
+				direction: "vertical",
+				// autoHeight: true,
+				autoplay: {
+					delay: 2000,
+				},
+				pagination: {
+					el: '#main .middle_banner .swiper-pagination',
+					clickable: true,
+				}
+			});
+
+			$('.pw .showhide').click(function() {
+                if($(this).hasClass('hide')) {
+                    $(this).removeClass('hide')
+                    $('.pw .pw_input input').attr('type', 'password');
+                }else {
+                    $(this).addClass('hide')
+                    $('.pw .pw_input input').attr('type', 'text');
+                }
+            })
+
+		})
+	</script>
+</body>
+</html>

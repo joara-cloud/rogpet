@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Rogpet - center</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/swiper.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+</head>
+
+<body>
+
+    <div id="wrap">
+        <header id="header">
+            <div id="hamburger" class="ham_btn"><span></span><span></span><span></span></div>
+            <h1 class="logo"><a href=""><img src="../assets/images/logo.png" alt="logo"></a></h1>
+            <a href="" class="btn_my"><img src="../assets/images/top_menu.png" alt="mall"></a>
+        </header>
+
+        <div id="container">
+            <div id="content" class="board_view">
+                <div class="c_inner">
+                    <h4>
+                        제목을 입력하세요
+                        <span>공지사항</span>
+                    </h4>
+                    <div class="b_cnt">
+                        <img src="../assets/images/temp.png" alt="">
+                        <p class="text">내용을 입력하세요.</p>
+                    </div>
+                </div>
+                <div class="middle_banner">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">임시</div>
+                            <div class="swiper-slide">임시</div>
+                            <div class="swiper-slide">임시</div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="bottomMenu">
+            <ul class="category">
+                <li class="active"><a href="">진료예약</a></li>
+                <li><a href="">펫상담실</a></li>
+                <li><a href="">펫스타그램</a></li>
+                <li><a href="">Pet Mall</a></li>
+                <li><a href="">Mypage</a></li>
+            </ul>
+        </footer>
+    </div>
+
+	<script src="../assets/js/jquery.js"></script>
+	<script src="../assets/js/swiper.js"></script>
+	<script src="../assets/js/common.js"></script>
+	<script>
+		$(document).ready(function() {
+
+			// 중간배너
+			var slider02 = new Swiper('.board_view .middle_banner .swiper-container', {
+				direction: "vertical",
+				// autoHeight: true,
+				autoplay: {
+					delay: 2000,
+				},
+				pagination: {
+					el: '.board_view .middle_banner .swiper-pagination',
+					clickable: true,
+				}
+			});
+
+
+		})
+	</script>
+
+</body>
+
+</html>
