@@ -68,9 +68,9 @@
                     <div class="time">
                         <div class="swiper-container select_list_wrap">
                             <ul class="swiper-wrapper time_list select_list">
-                                <li class="swiper-slide active">09 : 00</li>
-                                <li class="swiper-slide">09 : 30</li>
-                                <li class="swiper-slide">10 : 00</li>
+                                <li class="swiper-slide">09 : 00</li>
+                                <li class="swiper-slide disable">09 : 30</li>
+                                <li class="swiper-slide ">10 : 00</li>
                                 <li class="swiper-slide">10 : 30</li>
                                 <li class="swiper-slide">11 : 00</li>
                                 <li class="swiper-slide">11 : 30</li>
@@ -84,7 +84,7 @@
                             <li>구강검진</li>
                             <li>피부질환</li>
                             <li>외부기생충</li>
-                            <li class="etc active"><span>기타</span><input type="text" placeholder="갑자기 움직임이 둔하고, 먹지도 않아요."></li>
+                            <li class="etc "><span>기타</span><input type="text" placeholder="갑자기 움직임이 둔하고, 먹지도 않아요."></li>
                         </ul>
                     </div>
                     <div class="mt_30 detail_info">
@@ -144,7 +144,8 @@
 
             // 시간 슬라이드
             var timeSwiper = new Swiper(".diagnosis_02 .select_list_wrap", {
-                slidesPerView: 4,
+                slidesPerView: "auto",
+                spaceBetween: 5,
                 // slidesPerGroup: 7,
                 // navigation: {
                 //     nextEl: ".diagnosis_02 .select_list_wrap .swiper-button-next",
@@ -156,12 +157,14 @@
                 $(this).addClass('active')
             })
             $(document).on('click', '.kind_list > li', function() {
-                $('.kind_list > li').removeClass('active')
-                $(this).addClass('active')
+                $(this).toggleClass('active')
             })
             $(document).on('click', '.time_list > li', function() {
-                $('.time_list > li').removeClass('active')
-                $(this).addClass('active')
+                if(!$(this).hasClass('disable')) {
+                    $('.time_list > li').removeClass('active')
+                    $(this).addClass('active')
+
+                }
             });
 
 
