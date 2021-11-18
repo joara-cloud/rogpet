@@ -149,6 +149,7 @@ body {background:#f5f5f5;}
 .btn_ty01.orange {background:#FD9647}
 .btn_ty01.border {border:1px solid #85bc9d;color:#85bc9d !important;background:#fff}
 .btn_ty02 {display:inline-block;width:83px;height:22px;line-height:22px;border-radius:10px;font-size:10px;text-align:center;background-color:#fff3e9;}
+.btn_ty03 {display:block;width:100%;height:64px;line-height:64px;font-size:16px;color:#fff;text-align:center;background-color:#f19249;}
 
 /* switch */
 input[type="checkbox"] {display: none;}
@@ -372,10 +373,12 @@ input[type="checkbox"] {display: none;}
 .layer_mypage02 .period_form img {width:23.5px;margin-left:10px}
 .layer_mypage02 .period_form input[type="text"] {width:30%;border:0;border-bottom:1px solid #aaa;border-radius:0;}
 .layer_mypage02 .period_form label {margin-left:4px}
-.layer_mypage02 .btn_wrap {padding:14px 0 0;text-align:right;}
+.layer_mypage02 .btn_wrap {padding:20px 0 0;text-align:right;}
 .layer_mypage02 .popup_content > * {display:none;}
+.layer_mypage02 .popup_content .btn_wrap button {font-size:12px;font-weight:600;}
 .layer_mypage02.lp_period .popup_content .period_form {display:block;}
 .layer_mypage02.lp_review .popup_content .star_wrap {display:block;text-align:center;}
+.layer_mypage02.lp_review .popup_content .star_wrap h4 {margin:0 0 10px;font-size:12px;font-weight:500;}
 
 /* 상담내역 */
 .counhistory .tab .list .date {font-weight:400;}
@@ -459,9 +462,9 @@ input[type="checkbox"] {display: none;}
 .star {position:relative;width:75px;height:15px}
 .star img {width:75px;vertical-align:top;}
 .star .on_img {background:url(../images/star_on.jpg) no-repeat 0 50% / 75px;position:absolute;left:0;top:0;width:100%;height:15px}
-.star_type02 {position:relative;width:75px;height:15px}
-.star_type02 img {width:75px;vertical-align:top;}
-.star_type02 .on_img {background:url(../images/star_on.jpg) no-repeat 0 50% / 75px;position:absolute;left:0;top:0;width:100%;height:15px}
+.star_type02 {position:relative;width:215px;margin:0 auto}
+.star_type02 img {width:100%;vertical-align:top;}
+.star_type02 .on_img {background:url(../images/star_on.png) no-repeat 0 50% / 215px;position:absolute;left:0;top:0;width:100%;height:43px}
 
 /* (공통)진료예약화면 01, 호텔예약화면 01 */
 .reservation_list .inner {padding:25px 5%}
@@ -506,6 +509,23 @@ input[type="checkbox"] {display: none;}
 .diagnosis_02 .calender .swiper-slide.active span {color:#fff;font-weight:600;background-color:rgb(253,150,71);}
 .diagnosis_02 .dl_wrap {padding:5px 0 0}
 .diagnosis_02 .calender {margin:0 0 40px}
+.layer_reserve .inner {padding:0}
+.layer_reserve .check_ty02 label:before {position:absolute;right:14px;top:50%;margin-right:0;width:14px;height:14px;transform:translateY(-50%);}
+.layer_reserve .title {position:relative;margin:0 0 12px;text-align:center;text-align:center}
+.layer_reserve .title h5 {font-size:22px;color:#707070;font-weight:bold;letter-spacing:-0.5px;}
+.layer_reserve .btn_back {position:absolute;left:0;top:50%;transform:translateY(-50%);width:24px;}
+.layer_reserve .sub_title {height:27px;border-radius:14px;line-height:27px;font-size:14px;color:#fff;text-align:center;background-color:rgba(133,188,157,0.58)}
+.layer_reserve .box {display:flex;position:relative;padding:10px 14px;border-radius:10px;background-color:rgb(247,247,248);align-items:center;justify-content:space-between;}
+.layer_reserve .box span {font-size:12px;color:#b6b6b6}
+.layer_reserve .box strong {color:#707070}
+.layer_reserve .text {overflow:scroll;height:80px;margin:5px 0 20px;padding:14px;font-size:12px;color:#707070}
+.layer_reserve .agree_wrap .box label {color:#707070;font-weight:bold;font-size:14px;}
+.layer_reserve .terms_list {padding:5px 0}
+.layer_reserve .terms_list > li {display:flex;position:relative;margin:10px 0;padding:0 14px;color:#b5b5b5;font-size:12px;align-items:center;justify-content:space-between;}
+.layer_reserve .sticky_area {overflow:scroll;height:60vh}
+.layer_reserve .sticky_area .top_fixed {position:sticky;top:0;z-index:10;padding:30px 7%;background-color:#fff;}
+.layer_reserve .scrolled {padding:0 7%}
+.layer_reserve .info_wrap .name {margin:0 0 10px;font-size:16px;font-weight:500;letter-spacing:-0.5px;}
 
 /* (공통)달력 기간 */
 .calender .end_day, .calender .start_day {color:#fff;font-weight:600;background-color:rgb(255,226,204);border-radius:0;position:relative;}
@@ -586,9 +606,10 @@ input[type="checkbox"] {display: none;}
 .daterangepicker td.in-range:not(.end-date, .start-date) {border-radius:0;width:30px;min-width:30px;background:url(../images/date_mid.png) no-repeat 50% 50% / 30px}
 .daterangepicker td.start-date.end-date,
 .daterangepicker td.today.in-range {border-radius:0;height:30px;width:30px;min-width:30px;background:url(../images/date_today_img.png) no-repeat 50% 50% / 30px !important}
+.dim,
 .datepicker_dim,
 .daterangepicker_dim {position:fixed;left:0;top:0;z-index:10;width:100%;height:100%;background-color:rgba(0,0,0,0.35); -webkit-backdrop-filter:saturate(180%) blur(1px);
-  backdrop-filter: saturate(180%) blur(1px);pointer-events:none;}
+  backdrop-filter: saturate(180%) blur(1px);}
 .daterangepicker .calendar-table td.ends {opacity:0;pointer-events:none;}
 
   
@@ -596,7 +617,7 @@ input[type="checkbox"] {display: none;}
 .ui-widget-header {background-color:transparent;border:0}
 .ui-datepicker {}
 .ui-datepicker .ui-datepicker-title {margin:0;padding:0 10px;text-align:left;}
-.ui-widget.ui-widget-content {left:50% !important;top:50% !important;width:85%;padding:25px 17px 20px;transform:translate(-50%, -50%);border:0;border-radius:13px;}
+.ui-widget.ui-widget-content {position:fixed !important;left:50% !important;top:50% !important;width:85%;padding:25px 17px 20px;transform:translate(-50%, -50%);border:0;border-radius:13px;z-index:100 !important}
 .ui-datepicker-calendar {width:100%;text-align:center;}
 .ui-datepicker-calendar thead span {font-size:10px;color:rgb(112,112,112);font-weight:400;}
 .ui-datepicker-current-day {background-color: red;}

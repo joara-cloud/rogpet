@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<meta name="format-detection" content="telephone=no" />
 	<title>Rogpet - login</title>
 	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
@@ -114,7 +114,7 @@
                                 </dl>
                             </div>
                         </div>
-                        <button type="button" class="btn_ty01 btn_reservation">예약하기</button>
+                        <button type="button" class="btn_ty01 btn_reservation layerpopup_btn">예약하기</button> <!-- .layerpopup_btn 팝업 열기 버튼 -->
                     </div>
                 </div>
 
@@ -133,6 +133,61 @@
 		</footer>
 	</div>
 
+    <!-- 하단 레이어팝업 -->
+	<div id="" class="layerpopup">
+
+		<!-- s: 예약하기 -->
+		<div class="layer_reserve">
+			<div class="inner sticky_area">
+                <div class="top_fixed">
+                    <div class="title">
+                        <a href="" class="btn_back"><img src="../assets/images/arrow-left-gray@2x.png" alt="뒤로가기"></a>
+                        <h5>로그펫 동물병원</h5>
+                    </div>
+                    <p class="sub_title">예약자에게 하고 싶은 말을 적어보세요.</p>
+                </div>
+                <div class="scrolled">
+                    <div class="info_wrap">
+                        <h5 class="name">[ 김헨리 원장선생님 ]</h5>
+                        <div class="box"><span>예약일시</span><strong>11.05 월 9:30</strong></div>
+                        <div class="text">기타_갑자기 움직임이 둔하고, 먹지도 않아요.</div>
+                    </div>
+                    <div class="agree_wrap">
+                        <div class="box">
+                            <div class="check_ty02">
+                                <input type="checkbox" id="chkAll">
+                                <label for="chkAll">약관 전체 동의</label>
+                            </div>
+                        </div>
+                        <ul class="terms_list">
+                            <li>
+                                <div class="check_ty02">
+                                    <input type="checkbox" id="chk1">
+                                    <label for="chk1">숙소 이용규칙 및 취소/환불규정 동의 (필수)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="check_ty02">
+                                    <input type="checkbox" id="chk2">
+                                    <label for="chk2">개인정보 수집 및 이용 동의 (필수)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="check_ty02">
+                                    <input type="checkbox" id="chk3">
+                                    <label for="chk3">개인정보 제 3자 제공 동의 (필수)</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+			</div>
+            <button type="button" class="btn_ty03">예약하기</button>
+		</div>
+		<!-- e: 예약하기 -->
+
+	</div>
+
     <script src="../assets/js/jquery.js"></script>
 	<script src="../assets/js/swiper.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
@@ -142,11 +197,11 @@
         $(document).ready(function() {
 
             // 캘린더
+            var week = ["일", "월", "화", "수", "목", "금", "토"];
             function lastWeek(start, end) {
                 var today = start ? start : new Date();
                 var yesterday = new Date(today.setDate(today.getDate()));
                 var weekend = 7; // 일주일 기준
-                var week = ["일", "월", "화", "수", "목", "금", "토"];
 
                 $('.diagnosis_02 .calender .day').removeClass('end_day')
 
@@ -187,11 +242,11 @@
                 beforeShow: function() {
                     $('body').append('<div class="datepicker_dim"></div>')
                 },
-                onClose: function(date, obj) {
+                onClose: function() {
                     $('.datepicker_dim').remove()
-                    // var start = picker.startDate._d
-                    var setupDate = new Date(date.replaceAll('.', ','))
-                    // lastWeek(start, end);
+                },
+                onSelect: function(date, obj) {
+                    var setupDate = new Date(date.replaceAll('.', '-')) // ios버젼은 ,이 아닌 -로
                     lastWeek(setupDate);
                 }
             });

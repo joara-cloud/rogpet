@@ -1,14 +1,16 @@
 $(document).ready(function() {
-	$('#hamburger').click(function() {
+	$('#hamburger, .layerpopup_btn').click(function() {
 		$('.layerpopup').addClass('show');
 
 		if($('.layerpopup').hasClass('show')) { // 열려있음
 			$('body').append('<div class="dim"></div>');
+			$('body, html').addClass('dimmed')
 		}
 	})
 	$(document).on('click' ,'.dim', function() {
 		$('.layerpopup').removeClass('show is_qna');
 		$('.dim').remove();
+		$('body, html').removeClass('dimmed')
 	});
 
 	// 문의하기
