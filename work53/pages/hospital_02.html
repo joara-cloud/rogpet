@@ -30,64 +30,71 @@
 
 		<div id="container">
 			<div id="content" class="hospital_02 reservation">
-                <div class="center_thumb">
-                    <img src="../assets/images/no_img2@2x.png" alt="">
-                </div>
-                <div class="title_area">
-                    <h4>어서와펫호텔</h4>
-                    <p>경기고등학교 정문에서 100m</p>
-                </div>
-                <div class="calender">
-                    <div class="c_inner">
-                        <strong class="month">09</strong>
-                        <div class="days">
-                            <span>MON</span>
-                            <span>TUE</span>
-                            <span>WEB</span>
-                            <span>THU</span>
-                            <span>FRI</span>
-                            <span>SAT</span>
-                            <span>SUN</span>
+                <div class="sticky_area">
+                    <div class="center_thumb">
+                        <img src="../assets/images/no_img2@2x.png" alt="">
+                    </div>
+                    <div class="title_area">
+                        <h4>어서와펫호텔</h4>
+                        <p>경기고등학교 정문에서 100m</p>
+                    </div>
+                    <div class="inner">
+                        <div class="time">
+                            <h5>룸 컨디션<p>* 기준 Kg 수에 따라 추가요금 부가 됩니다.</p></h5>
+                            <ul class="select_list">
+                                <li class="">프리미엄</li>
+                                <li>2견 1실</li>
+                                <li>일반실</li>
+                            </ul>
                         </div>
-                        <div class="relative">
-                            <div class="swiper-container">
-                                <!-- class => 시작일: start_day / 중간: gap / 종료일: end_day -->
-                                <div class="weekend day_wrap">
-                                    <div class="day"><span>1</span></div>
-                                    <div class="day"><span>10</span></div>  
-                                    <div class="day"><span>11</span></div>
-                                    <div class="day"><span>12</span></div>
-                                    <div class="day"><span>13</span></div>
-                                    <div class="day"><span>14</span></div>
-                                    <div class="day"><span>15</span></div>
+                        <div class="calender">
+                            <strong class="month">09</strong>
+                            <div class="days">
+                                <span>MON</span>
+                                <span>TUE</span>
+                                <span>WEB</span>
+                                <span>THU</span>
+                                <span>FRI</span>
+                                <span>SAT</span>
+                                <span>SUN</span>
+                            </div>
+                            <div class="relative">
+                                <div class="swiper-container">
+                                    <!-- class => 시작일: start_day / 중간: gap / 종료일: end_day -->
+                                    <div class="weekend day_wrap">
+                                        <div class="day"><span>1</span></div>
+                                        <div class="day"><span>10</span></div>  
+                                        <div class="day"><span>11</span></div>
+                                        <div class="day"><span>12</span></div>
+                                        <div class="day"><span>13</span></div>
+                                        <div class="day"><span>14</span></div>
+                                        <div class="day"><span>15</span></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- <input type="text" name="dates"> -->
-                    </div>
-                </div>
-                <div class="inner">
-                    <div class="time">
-                        <h5>룸 컨디션<p>* 기준 Kg 수에 따라 추가요금 부가 됩니다.</p></h5>
-                        <ul class="time_list select_list">
-                            <li class="active">프리미엄</li>
-                            <li>2견 1실</li>
-                            <li>일반실</li>
-                        </ul>
-                    </div>
-                    <div class="kind">
-                        <h5>부가서비스</h5>
-                        <ul class="kind_list">
-                            <li class="active">위생미용</li>
-                            <li>목욕</li>
-                            <li>버블스파</li>
-                            <li>단독산책</li>
-                            <li class="etc input_ty01"><span>기타</span><input type="text" placeholder="갑자기 움직임이 둔하고, 먹지도 않아요."></li>
-                        </ul>
-                    </div>
-                    <!-- <div class="input_ty01"><span>기타</span><input type="text" placeholder="갑자기 움직임이 둔하고, 먹지도 않아요."></div> -->
+                        <div class="time">
+                            <h5>룸 컨디션<p>* 기준 Kg 수에 따라 추가요금 부가 됩니다.</p></h5>
+                            <ul class="select_list">
+                                <li class="">프리미엄</li>
+                                <li>2견 1실</li>
+                                <li>일반실</li>
+                            </ul>
+                        </div>
+                        <div class="kind">
+                            <h5>부가서비스</h5>
+                            <ul class="kind_list">
+                                <li class="active">위생미용</li>
+                                <li>목욕</li>
+                                <li>버블스파</li>
+                                <li>단독산책</li>
+                                <li class="etc input_ty01"><span>기타</span><input type="text" placeholder="갑자기 움직임이 둔하고, 먹지도 않아요."></li>
+                            </ul>
+                        </div>
+                        <!-- <div class="input_ty01"><span>기타</span><input type="text" placeholder="갑자기 움직임이 둔하고, 먹지도 않아요."></div> -->
 
-                    <button type="button" class="btn_ty01 btn_reservation">예약하기</button>
+                        <button type="button" class="btn_ty01 btn_reservation">예약하기</button>
+                    </div>
                 </div>
 			</div>
 		</div>
@@ -117,8 +124,8 @@
                 $('.kind_list > li').removeClass('active')
                 $(this).addClass('active')
             })
-            $(document).on('click', '.time_list > li', function() {
-                $('.time_list > li').removeClass('active')
+            $(document).on('click', '.select_list > li', function() {
+                $('.select_list > li').removeClass('active')
                 $(this).addClass('active')
             })
 

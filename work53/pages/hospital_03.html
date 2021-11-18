@@ -156,7 +156,7 @@
                 <div class="inner">
                     <div class="time">
                         <h5>룸 컨디션<p>* 기준 Kg 수에 따라 추가요금 부가 됩니다.</p></h5>
-                        <ul class="time_list select_list">
+                        <ul class="select_list">
                             <li class="active">프리미엄</li>
                             <li>2견 1실</li>
                             <li>일반실</li>
@@ -202,8 +202,8 @@
                 $('.kind_list > li').removeClass('active')
                 $(this).addClass('active')
             })
-            $(document).on('click', '.time_list > li', function() {
-                $('.time_list > li').removeClass('active')
+            $(document).on('click', '.select_list > li', function() {
+                $('.select_list > li').removeClass('active')
                 $(this).addClass('active')
             });
 

@@ -71,7 +71,7 @@
                         </div>
                         <div class="time">
                             <div class="swiper-container select_list_wrap">
-                                <ul class="swiper-wrapper time_list select_list">
+                                <ul class="swiper-wrapper select_list">
                                     <li class="swiper-slide">09 : 00</li>
                                     <li class="swiper-slide disable">09 : 30</li>
                                     <li class="swiper-slide ">10 : 00</li>
@@ -267,7 +267,7 @@
             // 시간 슬라이드
             var timeSwiper = new Swiper(".diagnosis_02 .select_list_wrap", {
                 slidesPerView: "auto",
-                spaceBetween: 5,
+                // spaceBetween: 5,
                 // slidesPerGroup: 7,
                 // navigation: {
                 //     nextEl: ".diagnosis_02 .select_list_wrap .swiper-button-next",
@@ -281,9 +281,9 @@
             $(document).on('click', '.kind_list > li', function() {
                 $(this).toggleClass('active')
             })
-            $(document).on('click', '.time_list > li', function() {
+            $(document).on('click', '.select_list > li', function() {
                 if(!$(this).hasClass('disable')) {
-                    $('.time_list > li').removeClass('active')
+                    $('.select_list > li').removeClass('active')
                     $(this).addClass('active')
 
                 }

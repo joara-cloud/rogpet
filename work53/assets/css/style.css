@@ -553,7 +553,7 @@ input[type="checkbox"] {display: none;}
 .reservation .doctor dt {font-size:15px;display:inline-block;}
 .reservation .doctor dd {font-size:10px;color:rgb(153,143,162);display:inline-block;}
 .reservation .inner {margin:30px 4%}
-.reservation .time_list {font-size:0;margin:15px 0 20px}
+.reservation .select_list {font-size:0;margin:15px 0 20px}
 .reservation .kind_list {margin-top:-5px;font-size:0}
 .reservation .kind_list > li {display:inline-block;border-radius:30px;font-size:12px;width:calc(25% - 6px);margin-left:8px;line-height:32px;height:32px;vertical-align:top;text-align:center;font-weight:500;color:#fff;position: relative;margin-top:6px;background-color:#d1d1d1;}
 .reservation .kind_list > li:first-child {margin-left:0}
@@ -565,21 +565,26 @@ input[type="checkbox"] {display: none;}
 .reservation .kind_list > li.active > span {display:inline-block;background:rgba(133,188,157);color:#fff !important;font-size:12px;}
 .reservation .calender .days {text-align:center;font-size:0;margin:0 auto 10px}
 .reservation .calender .days span {display:inline-block;width:calc(100% / 7);font-size:11px;color:rgb(112,112,112);}
+.reservation .select_list > li {width:25%;margin-right:5px;}
 
 /* 진료예약화면 */
-.diagnosis_02 .time_list > li {width:25%}
 .diagnosis_02 .input_ty01 span {background-color:#fff;color:rgb(182,182,182)}
 .diagnosis_02 .calender .relative .swiper-container {width:calc(100% - 80px)}
 .diagnosis_02 .calender .swiper-slide.active span {display:inline-block;width:37px;height:37px;border-radius:50%;line-height:37px;}
 .diagnosis_02 .swiper-button-prev {width:10px;left:17px}
 .diagnosis_02 .swiper-button-next {width:10px;right:17px}
 
+/* 호텔예약화면01 */
+.hospital_01 .select_date {display:flex;position:fixed;right:30px;top:160px;z-index:100;width:60px;height:60px;border-radius:50%;text-align:center;color:#fff;background-color:#85BC9D;flex-direction:column;justify-content:center;align-items:center;}
+.hospital_01 .select_date img {width:28.5px}
+.hospital_01 .select_date p {padding:3px 0 0;font-size:11px}
+
 /* 호텔예약화면02 */
 .hospital_02 .swiper-wrapper {justify-content:space-between;}
 .hospital_02 .calender .swiper-slide {width:calc(100% / 7)}
 .hospital_02 .calender .relative .swiper-container {width:100%}
 .hospital_02 .calender .c_inner {padding:0 4%}
-.hospital_02 .select_list > li {width:33.3%}
+/* .hospital_02 .select_list > li {width:33.3%} */
 .hospital_02 .kind {margin:40px 0 25px}
 .hospital_02 .kind_list > li.active {background-color:rgb(253,150,71);}
 .hospital_02 .kind_list > li.etc > span {background-color: rgb(112, 112, 112);color:#fff}
