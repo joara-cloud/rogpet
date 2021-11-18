@@ -16,7 +16,7 @@
  
 
     <style>
-        #header {position:absolute;left:0;top:0;width:100%}
+        #header {position:absolute !important;left:0;top:0;width:100%}
     </style>
 </head>
 <body>
@@ -52,16 +52,6 @@
                         <div class="relative">
                             <div class="swiper-container">
                                 <!-- class => 시작일: start_day / 중간: gap / 종료일: end_day -->
-                                <!-- <div class="swiper-wrapper">
-                                    <div class="swiper-slide day"><span>1</span></div>
-                                    <div class="swiper-slide day start_day"><span>10</span></div>  
-                                    <div class="swiper-slide day gap"><span>11</span></div>
-                                    <div class="swiper-slide day gap"><span>12</span></div>
-                                    <div class="swiper-slide day end_day"><span>13</span></div>
-                                    <div class="swiper-slide day"><span>14</span></div>
-                                    <div class="swiper-slide day"><span>15</span></div>
-                                    <div class="swiper-slide day"><span>16</span></div>
-                                </div> -->
                                 <div class="weekend day_wrap">
                                     <div class="day"><span>1</span></div>
                                     <div class="day"><span>10</span></div>  
@@ -70,7 +60,6 @@
                                     <div class="day"><span>13</span></div>
                                     <div class="day"><span>14</span></div>
                                     <div class="day"><span>15</span></div>
-                                    <div class="day"><span>16</span></div>
                                 </div>
                             </div>
                         </div>
@@ -133,11 +122,6 @@
                 $(this).addClass('active')
             })
 
-            $('.hospital_02 .calender .day').click(function() {
-                // console.log('sdjfio');
-            });
-
-
             function lastWeek(start, end) {
 
                 var today = start ? start : new Date();
@@ -174,8 +158,8 @@
                     // $('.hospital_02 .calender .day > *').eq(i).html(yesterday.getDay());
                     var week = ["일", "월", "화", "수", "목", "금", "토"];
 
-                    $('.reservation .calender .days span').eq(i).html(week[yesterday.getDay()]);
-                    $('.hospital_02 .calender .day > *').eq(i).html(yesterday.getDate());
+                    $('.reservation .calender .days span').eq(i).html(week[yesterday.getDay()]); // 요일
+                    $('.hospital_02 .calender .day > *').eq(i).html(yesterday.getDate()); // 일자
                 }
                 $('.hospital_02 .calender .month').html(today.getMonth()+1);
 
@@ -211,12 +195,10 @@
             })
 
             $('.day_wrap').on('show.daterangepicker', function(ev, picker) {
-                //do something, like clearing an input
                 $('body').append('<div class="daterangepicker_dim"></div>')
             });
             $('.day_wrap').on('hide.daterangepicker', function(ev, picker) {
-                //do something, like clearing an input
-                var start = picker.startDate._d
+                var start = picker.startDate._d //Thu Nov 18 2021 10:02:08 GMT+0900 (한국 표준시)
                 var end = picker.endDate._d
                 lastWeek(start, end);
                 $('.daterangepicker_dim').remove()

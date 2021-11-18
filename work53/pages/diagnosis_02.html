@@ -7,11 +7,12 @@
 	<meta name="format-detection" content="telephone=no" />
 	<title>Rogpet - login</title>
 	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/swiper.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
     <style>
-        #header {position:absolute;left:0;top:0;width:100%}
+        #header {position:absolute !important;left:0;top:0;width:100%}
     </style>
 </head>
 <body>
@@ -25,93 +26,99 @@
 
 		<div id="container">
 			<div id="content" class="diagnosis_02 reservation">
-                <div class="center_thumb">
-                    <img src="../assets/images/no_img2@2x.png" alt="">
-                </div>
-                <div class="title_area">
-                    <h4>스마트 동물병원</h4>
-                    <p>삼성동 2번출구 400m</p>
-                    <button type="button" class="like">
-                        <img src="../assets/images/icon@2x.png" alt="좋아요" class="off">
-                        <img src="../assets/images/icon_on@2x.png" alt="좋아요" class="on">
-                        <p>찜하기</p>
-                    </button>
-                </div>
-                <div class="calender">
-                    <div class="days">
-                        <span>MON</span>
-                        <span>TUE</span>
-                        <span>WEB</span>
-                        <span>THU</span>
-                        <span>FRI</span>
-                        <span>SAT</span>
-                        <span>SUN</span>
+                <div class="sticky_area">
+                    <div class="center_thumb">
+                        <img src="../assets/images/no_img2@2x.png" alt="">
                     </div>
-                    <div class="day_wrap">
-                        <div class="day active"><span>1</span></div>
-                        <div class="day"><span>2</span></div>
-                        <div class="day"><span>3</span></div>
-                        <div class="day"><span>4</span></div>
-                        <div class="day"><span>5</span></div>
-                        <div class="day"><span>6</span></div>
-                        <div class="day"><span>7</span></div>
+                    <div class="title_area">
+                        <h4>스마트 동물병원</h4>
+                        <p>삼성동 2번출구 400m</p>
+                        <button type="button" class="like">
+                            <img src="../assets/images/icon@2x.png" alt="좋아요" class="off">
+                            <img src="../assets/images/icon_on@2x.png" alt="좋아요" class="on">
+                            <p>찜하기</p>
+                        </button>
                     </div>
-                </div>
-                <div class="inner">
-                    <div class="doctor">
-                        <div class="thumb"><img src="../assets/images/avatar@2x.png" alt=""></div>
-                        <dl>
-                            <dt>김헨리</dt>
-                            <dd>원장선생님 / 강아지 전문의 / 매주 화요일 휴무</dd>
-                        </dl>
-                    </div>
-                    <div class="time">
-                        <div class="swiper-container select_list_wrap">
-                            <ul class="swiper-wrapper time_list select_list">
-                                <li class="swiper-slide">09 : 00</li>
-                                <li class="swiper-slide disable">09 : 30</li>
-                                <li class="swiper-slide ">10 : 00</li>
-                                <li class="swiper-slide">10 : 30</li>
-                                <li class="swiper-slide">11 : 00</li>
-                                <li class="swiper-slide">11 : 30</li>
+                    <div class="inner">
+                        <div class="calender">
+                            <strong class="month">09</strong>
+                            <div class="days">
+                                <span>MON</span>
+                                <span>TUE</span>
+                                <span>WEB</span>
+                                <span>THU</span>
+                                <span>FRI</span>
+                                <span>SAT</span>
+                                <span>SUN</span>
+                            </div>
+                            <input type="hidden" id="datepicker">
+                            <div class="day_wrap">
+                                <div class="day active"><span>1</span></div>
+                                <div class="day"><span>2</span></div>
+                                <div class="day"><span>3</span></div>
+                                <div class="day"><span>4</span></div>
+                                <div class="day"><span>5</span></div>
+                                <div class="day"><span>6</span></div>
+                                <div class="day"><span>7</span></div>
+                            </div>
+                        </div>
+                        <div class="doctor">
+                            <div class="thumb"><img src="../assets/images/avatar@2x.png" alt=""></div>
+                            <dl>
+                                <dt>김헨리</dt>
+                                <dd>원장선생님 / 강아지 전문의 / 매주 화요일 휴무</dd>
+                            </dl>
+                        </div>
+                        <div class="time">
+                            <div class="swiper-container select_list_wrap">
+                                <ul class="swiper-wrapper time_list select_list">
+                                    <li class="swiper-slide">09 : 00</li>
+                                    <li class="swiper-slide disable">09 : 30</li>
+                                    <li class="swiper-slide ">10 : 00</li>
+                                    <li class="swiper-slide">10 : 30</li>
+                                    <li class="swiper-slide">11 : 00</li>
+                                    <li class="swiper-slide">11 : 30</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt_30 kind">
+                            <h5>진료종류</h5>
+                            <ul class="kind_list">
+                                <li class="">예방접종</li>
+                                <li>구강검진</li>
+                                <li>피부질환</li>
+                                <li>외부기생충</li>
+                                <li class="etc "><span>기타</span><input type="text" placeholder="갑자기 움직임이 둔하고, 먹지도 않아요."></li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="mt_30 kind">
-                        <h5>진료종류</h5>
-                        <ul class="kind_list">
-                            <li class="">예방접종</li>
-                            <li>구강검진</li>
-                            <li>피부질환</li>
-                            <li>외부기생충</li>
-                            <li class="etc "><span>기타</span><input type="text" placeholder="갑자기 움직임이 둔하고, 먹지도 않아요."></li>
-                        </ul>
-                    </div>
-                    <div class="mt_30 detail_info">
-                        <h5>상세정보</h5>
-                        <div class="dl_wrap">
-                            <dl>
-                                <dt>운영시간</dt>
-                                <dd>
-                                    월 - 금  10:00 ~ 19:00<br>토,일, 공휴일  10:00 ~ 17:00
-                                </dd>
-                            </dl>
-                            <dl>
-                                <dt>휴일</dt>
-                                <dd>명절 당일 휴무</dd>
-                            </dl>
-                            <dl>
-                                <dt>연락처</dt>
-                                <dd>02-123-4567</dd>
-                            </dl>
-                            <dl>
-                                <dt>병원소개</dt>
-                                <dd>#슬개골탈구 #백내장  전문<br>고양이, 강아지 의료진 구분</dd>
-                            </dl>
+                        <div class="mt_30 detail_info">
+                            <h5>상세정보</h5>
+                            <div class="dl_wrap">
+                                <dl>
+                                    <dt>운영시간</dt>
+                                    <dd>
+                                        월 - 금  10:00 ~ 19:00<br>토,일, 공휴일  10:00 ~ 17:00
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>휴일</dt>
+                                    <dd>명절 당일 휴무</dd>
+                                </dl>
+                                <dl>
+                                    <dt>연락처</dt>
+                                    <dd>02-123-4567</dd>
+                                </dl>
+                                <dl>
+                                    <dt>병원소개</dt>
+                                    <dd>#슬개골탈구 #백내장  전문<br>고양이, 강아지 의료진 구분</dd>
+                                </dl>
+                            </div>
                         </div>
+                        <button type="button" class="btn_ty01 btn_reservation">예약하기</button>
                     </div>
-                    <button type="button" class="btn_ty01 btn_reservation">예약하기</button>
                 </div>
+
+
 			</div>
 		</div>
 
@@ -128,10 +135,70 @@
 
     <script src="../assets/js/jquery.js"></script>
 	<script src="../assets/js/swiper.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
 	<script src="../assets/js/common.js"></script>
     <script src="../assets/js/content.js"></script>
     <script>
         $(document).ready(function() {
+
+            // 캘린더
+            function lastWeek(start, end) {
+                var today = start ? start : new Date();
+                var yesterday = new Date(today.setDate(today.getDate()));
+                var weekend = 7; // 일주일 기준
+                var week = ["일", "월", "화", "수", "목", "금", "토"];
+
+                $('.diagnosis_02 .calender .day').removeClass('end_day')
+
+                for(var i=0; i<weekend; i++) {
+                    if(i===0) {
+                        yesterday.setDate(yesterday.getDate());
+                    }else {
+                        yesterday.setDate(yesterday.getDate() + 1);
+                    }
+
+                    var yText = yesterday+'';
+                    var sText = start+'';
+
+                    var a = yText.substr(0, 15)
+                    var startText = sText.substr(0, 15)
+                    
+                    if(a == startText) {
+                        $('.diagnosis_02 .calender .day').eq(i).addClass('start_day end_day');
+                    }
+                    $('.reservation .calender .days span').eq(i).html(week[yesterday.getDay()]); // 요일
+                    $('.diagnosis_02 .calender .day > *').eq(i).html(yesterday.getDate()); // 일자
+                }
+                $('.diagnosis_02 .calender .month').html(today.getMonth()+1);
+
+            }
+            lastWeek()
+
+            // 날짜선택
+            $("#datepicker").datepicker({
+                monthNames: ['/ 1', '/ 2', '/ 3', '/ 4', '/ 5', '/ 6', '/ 7', '/ 8', '/ 9', '/ 10', '/ 11', '/ 12'],
+                monthNamesShort: ['/ 1','/ 2','/ 3','/ 4','/ 5','/ 6','/ 7','/ 8','/ 9','/ 10','/ 11','/ 12'],
+                dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+                dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+                dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+                dateFormat: 'yy.mm.dd',
+                minDate : 0,
+                showMonthAfterYear: true,
+                beforeShow: function() {
+                    $('body').append('<div class="datepicker_dim"></div>')
+                },
+                onClose: function(date, obj) {
+                    $('.datepicker_dim').remove()
+                    // var start = picker.startDate._d
+                    var setupDate = new Date(date.replaceAll('.', ','))
+                    // lastWeek(start, end);
+                    lastWeek(setupDate);
+                }
+            });
+            $('.day_wrap').click(function() {
+                $("#datepicker").datepicker("show");
+            });
+
             // 날짜 슬라이드
             // var dateSwiper = new Swiper(".diagnosis_02 .day_wrap", {
             //     slidesPerView: 7,
@@ -166,7 +233,6 @@
 
                 }
             });
-
 
         })
     </script>
