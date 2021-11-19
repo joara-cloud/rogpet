@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no" />
+  <title>Rogpet - login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/swiper.css">
+  <!-- css -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+  <style>
+    #header {position: absolute !important;left: 0;top: 0;width: 100%}
+  </style>
+</head>
+
+<body>
+
+  <div id="wrap">
+    <header id="header">
+      <div class="btn_back"><img src="../assets/images/arrow-left@2x.png" alt="뒤로가기"></div>
+      <!-- <h1 class="logo"><a href=""><img src="../assets/images/logo.png" alt="logo"></a></h1> -->
+      <a href="" class="btn_my"><img src="../assets/images/top_menu_white@2x.png" alt="mall"></a>
+    </header>
+
+    <div id="container">
+      <div id="content" class="beautyshop reservation">
+        <div class="sticky_area">
+          <div class="center_thumb">
+            <img src="../assets/images/no_img2@2x.png" alt="">
+          </div>
+          <div class="title_area">
+            <h4>로그펫 뷰티샵</h4>
+            <p>경기고등학교 정문에서 100m</p>
+            <button type="button" class="like">
+              <img src="../assets/images/icon@2x.png" alt="좋아요" class="off">
+              <img src="../assets/images/icon_on@2x.png" alt="좋아요" class="on">
+              <p>찜하기</p>
+            </button>
+          </div>
+          <div class="inner">
+            <div class="part">
+              <h5>견종 선택</h5>
+              <ul class="select_list">
+                <li class="active">소형견</li>
+                <li class="">중형견</li>
+                <li class="">대형견</li>
+                <li class="">특수견</li>
+              </ul>
+            </div>
+            <div class="part">
+              <h5>뷰티 서비스<p>* 중복선택 가능합니다.</p>
+              </h5>
+              <ul class="select_list checkbox">
+                <li class="active">전체미용</li>
+                <li class="">목욕+부분</li>
+                <li class="">부분미용</li>
+                <li class="">부분 가위컷</li>
+                <li class="">전체 가위컷</li>
+                <li class="">스포팅</li>
+              </ul>
+            </div>
+            <div class="part">
+              <h5>선택 서비스<p>* 중복선택 가능합니다.</p>
+              </h5>
+              <ul class="select_list checkbox">
+                <li class="active">발톱</li>
+                <li class="">발등/발바닥</li>
+                <li class="">스파</li>
+                <li class="">하이바컷</li>
+                <li class="">브로콜리컷</li>
+                <li class="">곰돌이컷</li>
+                <li class="">테디베어컷</li>
+                <li class="">베이비컷</li>
+                <li class="">귀툭튀컷</li>
+                <li class="">사나움(입질)</li>
+                <li class="">털엉킴</li>
+                <li class="">크라운컷</li>
+                <li class="">이중모/강모</li>
+                <li class="">장모</li>
+              </ul>
+            </div>
+            <div class="calender part">
+              <strong class="month">09</strong>
+              <div class="days">
+                  <span>MON</span>
+                  <span>TUE</span>
+                  <span>WEB</span>
+                  <span>THU</span>
+                  <span>FRI</span>
+                  <span>SAT</span>
+                  <span>SUN</span>
+              </div>
+              <input type="hidden" id="datepicker">
+              <div class="day_wrap">
+                  <div class="day active"><span>1</span></div>
+                  <div class="day"><span>2</span></div>
+                  <div class="day"><span>3</span></div>
+                  <div class="day"><span>4</span></div>
+                  <div class="day"><span>5</span></div>
+                  <div class="day"><span>6</span></div>
+                  <div class="day"><span>7</span></div>
+              </div>
+          </div>
+            <div class="part">
+              <h5>예약시간<p>* 입실시간은 지켜주세요.</p>
+              </h5>
+                <ul class="select_list">
+                  <li class="">09 : 00</li>
+                  <li class="disable">09 : 30</li>
+                  <li class="">10 : 00</li>
+                  <li class="">10 : 30</li>
+                  <li class="">11 : 00</li>
+                  <li class="">11 : 30</li>
+                </ul>
+            </div>
+            <div class="part">
+              <h5>체중<p>* 체중에 따른 요금 차이가 없는 곳은 가려집니다.</p>
+              </h5>
+              <ul class="select_list">
+                <li class="">~ 5Kg</li>
+                <li class="">5 ~ 10Kg</li>
+                <li class="">10Kg ~</li>
+              </ul>
+            </div>
+            <div class="detail_info part">
+              <h5>기본정보</h5>
+              <div class="dl_wrap">
+                <dl>
+                  <dt>고양이 미용시</dt>
+                  <dd>마취 의사 결정가능</dd>
+                </dl>
+                <dl>
+                  <dt>입실제한</dt>
+                  <dd>
+                    5개월 미만, 5차 접종이 끝나지 않은 펫.<br>
+                    펫 나이, 병력, 성격 등 고려 했을 때 위험한 경우.<br>
+                    입질하는 아이들은 환불없이 퇴실조치 가능합니다.
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>안내사항</dt>
+                  <dd>
+                    목욕/스파 이용시 : <br>
+                    발톱, 발바닥, 항문낭, 귀청소 포함<br><br>
+
+                    부분 미용시 : <br>
+                    배, 발, 발톱, 항문, 귀 청소 포함<br><br>
+
+                    예약사항과 차이가 나는 부분은 현장에서 <br>
+                    추가요금이 부가 될 수 있습니다. 
+                  </dd>
+                </dl>
+              </div>
+            </div>
+
+            <!-- <div class="input_ty01"><span>기타</span><input type="text" placeholder="갑자기 움직임이 둔하고, 먹지도 않아요."></div> -->
+
+            <button type="button" class="btn_ty01 btn_reservation layerpopup_btn">예약하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="bottomMenu">
+      <ul class="category">
+        <li class="active"><a href="">진료예약</a></li>
+        <li><a href="">펫상담실</a></li>
+        <li><a href="">펫스타그램</a></li>
+        <li><a href="">Pet Mall</a></li>
+        <li><a href="">Mypage</a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <!-- 하단 레이어팝업 -->
+  <div id="" class="layerpopup">
+
+    <!-- s: 예약하기 -->
+    <div class="layer_reserve">
+      <div class="inner sticky_area">
+        <div class="top_fixed">
+          <div class="title">
+            <a href="" class="btn_back"><img src="../assets/images/arrow-left-gray@2x.png" alt="뒤로가기"></a>
+            <h5>로그펫 뷰티샵</h5>
+          </div>
+          <p class="sub_title">아이들의 모질과 바디에 따른 맞춤형 뷰티샵</p>
+        </div>
+        <div class="scrolled">
+          <div class="info_wrap">
+            <h5 class="name">[ 전체미용 ]</h5>
+            <div class="box">
+              <span>예약일시</span>
+              <strong>11.05 월 9:30</strong>
+            </div>
+          </div>
+          <div class="dl_wrap">
+            <dl>
+              <dt>
+                전체미용 
+                <strong>중형견 / 5 ~ 10Kg</strong>
+              </dt>
+              <dd>150,000원</dd>
+            </dl>
+            <dl>
+              <dt>발톱</dt>
+              <dd>20,000원</dd>
+            </dl>
+            <dl>
+              <dt>스파</dt>
+              <dd>30,000원</dd>
+            </dl>
+            <dl>
+              <dt>테디베어컷</dt>
+              <dd>130,000원</dd>
+            </dl>
+          </div>
+          <div class="notice_wrap">
+            <h5>주의사항이 있나요?</h5>
+            <p>우리 아가가 다른 친구들한테 물려도 가만히 있어서 놀이시간에
+              잘 봐주세요 꼭 부탁드려요. <br>
+              다른 곳에서 놀이시간에 물려서 피가 났었거든요.</p>
+          </div>
+          <div class="agree_wrap">
+            <div class="box">
+              <div class="check_ty02">
+                <input type="checkbox" id="chkAll">
+                <label for="chkAll">약관 전체 동의</label>
+              </div>
+            </div>
+            <ul class="terms_list">
+              <li>
+                <div class="check_ty02">
+                  <input type="checkbox" id="chk1">
+                  <label for="chk1">이용규칙 및 취소/환불규정 동의 (필수)</label>
+                </div>
+              </li>
+              <li>
+                <div class="check_ty02">
+                  <input type="checkbox" id="chk2">
+                  <label for="chk2">개인정보 수집 및 이용 동의 (필수)</label>
+                </div>
+              </li>
+              <li>
+                <div class="check_ty02">
+                  <input type="checkbox" id="chk3">
+                  <label for="chk3">개인정보 제 3자 제공 동의 (필수)</label>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn_ty03">63,000원 결제하기</button>
+    </div>
+    <!-- e: 예약하기 -->
+
+  </div>
+
+  <script src="../assets/js/jquery.js"></script>
+  <script src="../assets/js/swiper.js"></script>
+  <!-- js -->
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/content.js"></script>
+
+  <script>
+    $(document).ready(function () {
+
+      // 캘린더
+      var week = ["일", "월", "화", "수", "목", "금", "토"];
+      function lastWeek(start, end) {
+        var today = start ? start : new Date();
+        var yesterday = new Date(today.setDate(today.getDate()));
+        var weekend = 7; // 일주일 기준
+
+        $('.beautyshop .calender .day').removeClass('end_day')
+
+        for (var i = 0; i < weekend; i++) {
+          if (i === 0) {
+            yesterday.setDate(yesterday.getDate());
+          } else {
+            yesterday.setDate(yesterday.getDate() + 1);
+          }
+
+          var yText = yesterday + '';
+          var sText = start + '';
+
+          var a = yText.substr(0, 15)
+          var startText = sText.substr(0, 15)
+
+          if (a == startText) {
+            $('.beautyshop .calender .day').eq(i).addClass('start_day end_day');
+          }
+          $('.reservation .calender .days span').eq(i).html(week[yesterday.getDay()]); // 요일
+          $('.beautyshop .calender .day > *').eq(i).html(yesterday.getDate()); // 일자
+        }
+        $('.beautyshop .calender .month').html(today.getMonth() + 1);
+
+      }
+      lastWeek()
+
+      // 날짜선택
+      $("#datepicker").datepicker({
+        monthNames: ['/ 1', '/ 2', '/ 3', '/ 4', '/ 5', '/ 6', '/ 7', '/ 8', '/ 9', '/ 10', '/ 11', '/ 12'],
+        monthNamesShort: ['/ 1', '/ 2', '/ 3', '/ 4', '/ 5', '/ 6', '/ 7', '/ 8', '/ 9', '/ 10', '/ 11', '/ 12'],
+        dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+        dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+        dateFormat: 'yy.mm.dd',
+        minDate: 0,
+        showMonthAfterYear: true,
+        beforeShow: function () {
+          $('body').append('<div class="datepicker_dim"></div>')
+        },
+        onClose: function () {
+          $('.datepicker_dim').remove()
+        },
+        onSelect: function (date, obj) {
+          var setupDate = new Date(date.replaceAll('.', '-')) // ios버젼은 ,이 아닌 -로
+          lastWeek(setupDate);
+        }
+      });
+      $('.day_wrap').click(function () {
+        $("#datepicker").datepicker("show");
+      });
+
+      // 시간 슬라이드
+      var timeSwiper = new Swiper(".beautyshop .select_list_wrap", {
+        slidesPerView: "auto",
+      });
+
+      // 선택 활성화
+      $(document).on('click', '.select_list > li', function () {
+        var $this = $(this);
+        if (!$this.hasClass('disable')) {
+          if ($this.parents('.select_list').hasClass('checkbox')) {
+            $this.toggleClass('active')
+          } else {
+            $this.parents('.select_list').children('li').removeClass('active');
+            $this.addClass('active');
+          }
+        }
+      })
+
+      // 선택항목 - 슬라이드
+      $('.swiper-container').each(function (index, element) {
+        var $this = $(this);
+        $this.addClass('instance-' + index);
+
+        var swiper = new Swiper('.instance-' + index, {
+          slidesPerView: "auto",
+        });
+
+      })
+    })
+  </script>
+</body>
+
+</html>

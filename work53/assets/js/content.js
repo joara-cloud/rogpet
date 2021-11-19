@@ -6,6 +6,7 @@ $(document).ready(function() {
         $(this).addClass('active');
     });
 
+    // 찜하기
     $('.title_area .like').click(function() {
         $(this).toggleClass('on');
     })

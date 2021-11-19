@@ -274,6 +274,43 @@ input[type="checkbox"] {display: none;}
 .layer_point .total strong {font-size:17px}
 .layer_point .btn_ty01 {display:block;width:180px;margin:0 auto 35px}
 
+/* 하단 레이어팝업 - 병원예약, 호텔예약 */
+.layer_reserve .inner {padding:0}
+.layer_reserve .check_ty02 label:before {position:absolute;right:14px;top:50%;margin-right:0;width:14px;height:14px;transform:translateY(-50%);}
+.layer_reserve .title {position:relative;margin:0 0 12px;text-align:center;text-align:center}
+.layer_reserve .title h5 {font-size:22px;color:#707070;font-weight:bold;letter-spacing:-0.5px;}
+.layer_reserve .btn_back {position:absolute;left:0;top:50%;transform:translateY(-50%);width:24px;}
+.layer_reserve .sub_title {height:27px;border-radius:14px;line-height:27px;font-size:14px;color:#fff;text-align:center;background-color:rgba(133,188,157,0.58)}
+.layer_reserve .agree_wrap {margin:0 0 25px}
+.layer_reserve .box {display:flex;position:relative;padding:10px 14px;border-radius:10px;background-color:rgb(247,247,248);align-items:center;justify-content:space-between;}
+.layer_reserve .box span {font-size:12px;color:#b6b6b6}
+.layer_reserve .box strong {color:#707070}
+.layer_reserve .text {overflow:scroll;height:80px;margin:5px 0 20px;padding:14px;font-size:12px;color:#707070}
+.layer_reserve .agree_wrap .box label {color:#707070;font-weight:bold;font-size:14px;}
+.layer_reserve .terms_list {padding:5px 0}
+.layer_reserve .terms_list > li {display:flex;position:relative;margin:10px 0;padding:0 14px;color:#b5b5b5;font-size:12px;align-items:center;justify-content:space-between;}
+.layer_reserve .sticky_area {overflow:scroll;height:60vh}
+.layer_reserve .sticky_area .top_fixed {position:sticky;top:0;z-index:10;padding:30px 7%;background-color:#fff;}
+.layer_reserve .scrolled {padding:0 7%}
+.layer_reserve .info_wrap .name {margin:0 0 10px;font-size:16px;font-weight:500;letter-spacing:-0.5px;}
+
+/* 호텔예약 */
+.layer_reserve .box_wrap {display:flex;flex-wrap:wrap;justify-content:space-between;}
+.layer_reserve .box_wrap .box {width:calc(50% - 5px);margin-left:10px}
+.layer_reserve .box_wrap .box:first-child {margin-left:0}
+.layer_reserve .box_wrap .box {flex-direction:column;align-items:flex-start;}
+.layer_reserve .box_wrap .box span {display:block;margin:0 0 2px;font-size:11px;}
+.layer_reserve .box_wrap .box strong {font-size:15px;}
+.layer_reserve .dl_wrap {margin:30px 0}
+.layer_reserve .dl_wrap dl {margin-top:8px}
+.layer_reserve .dl_wrap dt {width:75%}
+.layer_reserve .dl_wrap dt a {text-decoration:underline;color:#b6b6b6}
+.layer_reserve .dl_wrap dt strong {color:#707070;font-weight:500;}
+.layer_reserve .dl_wrap dd {width:25%;text-align:right;}
+.layer_reserve .notice_wrap {margin:0 0 20px}
+.layer_reserve .notice_wrap h5 {font-size:16px;color:#ACACAC;font-weight:600;}
+.layer_reserve .notice_wrap p {padding:10px;font-size:12px;color:#6F7070}
+
 /* (공통)메뉴 */
 .menu_list {display:flex;flex-wrap:wrap}
 .menu_list dt {font-size:24px;color:rgb(195,203,207)}
@@ -431,8 +468,6 @@ input[type="checkbox"] {display: none;}
 .join .comment a {color:#FD9647;font-weight:700;}
 .join .agree_wrap label span {color:#004EFF;font-size:10px;letter-spacing:-0.5px;padding-left:2px}
 
-
-
 /* 예약센터 */
 .reservation_center {padding:25px 0 0}
 .reservation_center .inner {padding:0 5%}
@@ -492,15 +527,12 @@ input[type="checkbox"] {display: none;}
 .reservation .title_area .like.on p {color:#FD9647}
 .reservation .title_area h4 {color:rgb(112,112,112);font-size:24px;font-weight:600;}
 .reservation .title_area p {color:rgb(112,112,112);font-size:15px;padding:2px 0 0}
-.reservation .calender {}
-.reservation .calender .month {display:block;padding:0 3.5% 5px;font-size:25px;color:rgb(112,112,112)}
-.reservation h5 {font-size:15px;color:rgb(112,112,112);margin:0 0 10px}
-.reservation h5 p {font-size:10px;color:rgb(182,182,182);margin:0 0 0 30px;display:inline-block;font-weight:300;}
+.reservation .calender .month {display:block;margin:0 0 10px;padding:0 3.5%;font-size:25px;color:rgb(112,112,112);letter-spacing:-1px;}
+.reservation h5 {position:relative;font-size:15px;color:rgb(112,112,112);margin:0 0 10px}
+.reservation .calender .month_area {position:relative;}
+.reservation .calender .month_area p,
+.reservation h5 p {position:absolute;right:0;top:50%;font-size:10px;color:rgb(182,182,182);margin:0 0 0 30px;display:inline-block;font-weight:300;transform:translateY(-50%);}
 .reservation .btn_reservation {font-size:14px;line-height:35px;height:35px;font-weight: 500;margin:25px auto 0;width:70%;display:block;}
-.reservation .select_list {font-size:0;margin:15px 0 20px;display:flex}
-.reservation .select_list > li {display:inline-block;font-size:12px;width:80px;border-radius:30px;line-height:32px;height:32px;vertical-align:top;text-align:center;color:#ddd;background-color:#f5f5f5}
-.reservation .select_list > li:not(.disable) {color:#fff;background-color:#d1d1d1}
-.reservation .select_list > li.active {background:rgba(133,188,157);color:#fff !important;font-weight:bold;}
 .reservation .sticky_area {min-height:100vh;}
 .reservation .sticky_area .title_area {position:sticky;top:0;left:0;z-index:10;background-color:#fff;}
 
@@ -509,23 +541,6 @@ input[type="checkbox"] {display: none;}
 .diagnosis_02 .calender .swiper-slide.active span {color:#fff;font-weight:600;background-color:rgb(253,150,71);}
 .diagnosis_02 .dl_wrap {padding:5px 0 0}
 .diagnosis_02 .calender {margin:0 0 40px}
-.layer_reserve .inner {padding:0}
-.layer_reserve .check_ty02 label:before {position:absolute;right:14px;top:50%;margin-right:0;width:14px;height:14px;transform:translateY(-50%);}
-.layer_reserve .title {position:relative;margin:0 0 12px;text-align:center;text-align:center}
-.layer_reserve .title h5 {font-size:22px;color:#707070;font-weight:bold;letter-spacing:-0.5px;}
-.layer_reserve .btn_back {position:absolute;left:0;top:50%;transform:translateY(-50%);width:24px;}
-.layer_reserve .sub_title {height:27px;border-radius:14px;line-height:27px;font-size:14px;color:#fff;text-align:center;background-color:rgba(133,188,157,0.58)}
-.layer_reserve .box {display:flex;position:relative;padding:10px 14px;border-radius:10px;background-color:rgb(247,247,248);align-items:center;justify-content:space-between;}
-.layer_reserve .box span {font-size:12px;color:#b6b6b6}
-.layer_reserve .box strong {color:#707070}
-.layer_reserve .text {overflow:scroll;height:80px;margin:5px 0 20px;padding:14px;font-size:12px;color:#707070}
-.layer_reserve .agree_wrap .box label {color:#707070;font-weight:bold;font-size:14px;}
-.layer_reserve .terms_list {padding:5px 0}
-.layer_reserve .terms_list > li {display:flex;position:relative;margin:10px 0;padding:0 14px;color:#b5b5b5;font-size:12px;align-items:center;justify-content:space-between;}
-.layer_reserve .sticky_area {overflow:scroll;height:60vh}
-.layer_reserve .sticky_area .top_fixed {position:sticky;top:0;z-index:10;padding:30px 7%;background-color:#fff;}
-.layer_reserve .scrolled {padding:0 7%}
-.layer_reserve .info_wrap .name {margin:0 0 10px;font-size:16px;font-weight:500;letter-spacing:-0.5px;}
 
 /* (공통)달력 기간 */
 .calender .end_day, .calender .start_day {color:#fff;font-weight:600;background-color:rgb(255,226,204);border-radius:0;position:relative;}
@@ -552,20 +567,26 @@ input[type="checkbox"] {display: none;}
 .reservation .doctor dl {margin:0 0 5px 8px}
 .reservation .doctor dt {font-size:15px;display:inline-block;}
 .reservation .doctor dd {font-size:10px;color:rgb(153,143,162);display:inline-block;}
-.reservation .inner {margin:30px 4%}
-.reservation .select_list {font-size:0;margin:15px 0 20px}
-.reservation .kind_list {margin-top:-5px;font-size:0}
-.reservation .kind_list > li {display:inline-block;border-radius:30px;font-size:12px;width:calc(25% - 6px);margin-left:8px;line-height:32px;height:32px;vertical-align:top;text-align:center;font-weight:500;color:#fff;position: relative;margin-top:6px;background-color:#d1d1d1;}
+.reservation .inner {margin:30px 5%}
+.reservation .select_list {font-size:0;margin:15px 0 0;display:flex;flex-wrap:wrap;}
+.reservation .select_list > li {display:inline-block;font-size:12px;width:90px;border-radius:30px;line-height:32px;height:32px;vertical-align:top;text-align:center;color:#ddd;font-weight:bold;}
+.reservation .select_list > li:not(.disable) {color:#707070}
+.reservation .select_list > li.active {color:#fff;background-color:rgb(133,188,157);}
+.reservation .select_list.checkbox > li {margin-right:4.5px}
+.reservation .select_list:not(.swiper-wrapper) > li {width:calc(33.3% - 3px);margin-bottom:5px}
+.reservation .select_list:not(.swiper-wrapper) > li:nth-child(3n) {margin-right:0}
+.reservation .kind_list {display:block;margin-top:-5px;font-size:0}
+.reservation .kind_list > li {display:inline-block;border-radius:30px;font-size:12px;width:calc(25% - 6px);margin:0 0 0 8px;line-height:32px;height:32px;vertical-align:top;text-align:center;position: relative;margin-top:6px;}
 .reservation .kind_list > li:first-child {margin-left:0}
 .reservation .kind_list > li.etc {width:100%;margin-top:10px;margin-left:0}
-.reservation .kind_list > li.etc span {display:inline-block;font-size:12px;width:80px;line-height:32px;height:32px;vertical-align:top;text-align:center;font-weight:500;color:#fff;position: absolute;left:0;z-index:5;background:#d1d1d1;border-radius:30px;}
+.reservation .kind_list > li.etc span {display:inline-block;font-size:12px;width:80px;line-height:32px;height:32px;vertical-align:top;text-align:center;font-weight:500;position: absolute;left:0;z-index:5;background:#fff;border-radius:30px;color:#707070}
 .reservation .kind_list > li.etc input[type="text"] {border:0;position:absolute;left:0;top:0;width:100%;padding-left:88px;height:32px;line-height:32px;background:rgb(235,235,235);border-radius:30px;letter-spacing:-0.5px;outline:none;}
 .reservation .kind_list > li.etc input[type="text"]::placeholder {color:rgb(182,182,182)}
 .reservation .kind_list > li.active,
 .reservation .kind_list > li.active > span {display:inline-block;background:rgba(133,188,157);color:#fff !important;font-size:12px;}
 .reservation .calender .days {text-align:center;font-size:0;margin:0 auto 10px}
 .reservation .calender .days span {display:inline-block;width:calc(100% / 7);font-size:11px;color:rgb(112,112,112);}
-.reservation .select_list > li {width:25%;margin-right:5px;}
+.reservation .part {margin-top:30px}
 
 /* 진료예약화면 */
 .diagnosis_02 .input_ty01 span {background-color:#fff;color:rgb(182,182,182)}
@@ -575,24 +596,19 @@ input[type="checkbox"] {display: none;}
 .diagnosis_02 .swiper-button-next {width:10px;right:17px}
 
 /* 호텔예약화면01 */
-.hospital_01 .select_date {display:flex;position:fixed;right:30px;top:160px;z-index:100;width:60px;height:60px;border-radius:50%;text-align:center;color:#fff;background-color:#85BC9D;flex-direction:column;justify-content:center;align-items:center;}
+.hospital_01 .select_date {display:flex;position:fixed;right:30px;top:160px;z-index:100;width:62px;height:62px;border-radius:50%;text-align:center;color:#fff;background-color:#85BC9D;flex-direction:column;justify-content:center;align-items:center;}
 .hospital_01 .select_date img {width:28.5px}
 .hospital_01 .select_date p {padding:3px 0 0;font-size:11px}
 
 /* 호텔예약화면02 */
-.hospital_02 .swiper-wrapper {justify-content:space-between;}
 .hospital_02 .calender .swiper-slide {width:calc(100% / 7)}
 .hospital_02 .calender .relative .swiper-container {width:100%}
 .hospital_02 .calender .c_inner {padding:0 4%}
-/* .hospital_02 .select_list > li {width:33.3%} */
 .hospital_02 .kind {margin:40px 0 25px}
-.hospital_02 .kind_list > li.active {background-color:rgb(253,150,71);}
-.hospital_02 .kind_list > li.etc > span {background-color: rgb(112, 112, 112);color:#fff}
-.hospital_02 .kind_list > li.etc.active > span {background-color:rgb(253,150,71)}
-
+.hospital_02 .notice h5 {margin:0 0 17px}
 
 /* 캘린더 daterangepicker */
-.daterangepicker {position:fixed;left:50% !important;top:50% !important;z-index:50;width:auto;margin-top:0;padding:15px 0 5px;transform:translate(-50%, -50%);font-family: 'Montserrat', sans-serif;}
+.daterangepicker {position:fixed;left:50% !important;top:50% !important;z-index:50;width:auto;margin-top:0;padding:15px 0 5px;transform:translate(-50%, -50%);}
 .daterangepicker.show-calendar .ranges {margin-top:0}
 .daterangepicker .calendar-table table {width:210px;table-layout:fixed;}
 .daterangepicker .drp-calendar.left, .daterangepicker .drp-calendar.right {padding:0 18px}
@@ -603,9 +619,9 @@ input[type="checkbox"] {display: none;}
 .daterangepicker .calendar-table .prev {text-align:left;}
 .daterangepicker .calendar-table .prev span {background:url(../images/arrow-left-orange@2x.png) no-repeat 50% 50% / 7px}
 .daterangepicker .calendar-table .next span {background:url(../images/arrow-right-orange@2x.png) no-repeat 50% 50% / 7px}
-.daterangepicker .calendar-table .day {color:#3c3c434d;font-size:12px;font-weight:500;}
+.daterangepicker .calendar-table .day {padding:4px 0 0;color:#3c3c434d;font-size:12px;font-weight:600;}
 .daterangepicker .calendar-table th {font-size:17px;width:30px;min-width:auto;}
-.daterangepicker .calendar-table td {font-size:17px;width:30px;height:34px;border:0}
+.daterangepicker .calendar-table td {font-size:15px;width:30px;height:34px;border:0}
 .daterangepicker td.active, .daterangepicker td.active:hover {border-radius:0;width:30px;min-width:30px;background:url(../images/date_start_img.png) no-repeat 50% 50% / 30px}
 .daterangepicker td.end-date {border-radius:0;height:30px;width:30px;min-width:30px;background:url(../images/date_end_img.png) no-repeat 50% 50% / 30px}
 .daterangepicker td.in-range:not(.end-date, .start-date) {border-radius:0;width:30px;min-width:30px;background:url(../images/date_mid.png) no-repeat 50% 50% / 30px}
@@ -647,6 +663,7 @@ input[type="checkbox"] {display: none;}
 /* 호텔예약화면03 */
 .hospital_03 .calender {padding:0 5%}
 .hospital_03 .ui-corner-all {display:none;width:100%;padding:0;transform:translate(0, 0);}
+.hospital_03 .ui-widget.ui-widget-content {position:static !important;}
 .hospital_03 .ui-datepicker-calendar {width:100%;text-align:center;}
 .hospital_03 .ui-datepicker-calendar thead span {font-size:10px;color:rgb(112,112,112);font-weight:400;}
 .hospital_03 .ui-datepicker-current-day {background-color: red;}
