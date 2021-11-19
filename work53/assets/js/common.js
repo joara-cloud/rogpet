@@ -26,6 +26,19 @@ $(document).ready(function() {
 		$('.layer_popup').hide();
 	})
 
+	// 선택 활성화
+	$(document).on('click', '.select_list > li', function () {
+		var $this = $(this);
+		if (!$this.hasClass('disable')) {
+			if ($this.parents('.select_list').hasClass('checkbox')) {
+				$this.toggleClass('active')
+			} else {
+				$this.parents('.select_list').children('li').removeClass('active');
+				$this.addClass('active');
+			}
+		}
+	})
+
 	// SELECT CUSTOM
 	var x, i, j, l, ll, selElmnt, a, b, c;
 	/*look for any elements with the class "custom-select":*/

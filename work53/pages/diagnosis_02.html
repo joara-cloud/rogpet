@@ -278,16 +278,6 @@
                 $('.reservation .calender .swiper-slide').removeClass('active')
                 $(this).addClass('active')
             })
-            $(document).on('click', '.kind_list > li', function() {
-                $(this).toggleClass('active')
-            })
-            $(document).on('click', '.select_list > li', function() {
-                if(!$(this).hasClass('disable')) {
-                    $('.select_list > li').removeClass('active')
-                    $(this).addClass('active')
-
-                }
-            });
 
         })
     </script>

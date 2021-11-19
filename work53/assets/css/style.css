@@ -584,11 +584,10 @@ input[type="checkbox"] {display: none;}
 .reservation .select_list > li:not(.disable) {color:#707070}
 .reservation .select_list > li.active {color:#fff;background-color:rgb(133,188,157);}
 .reservation .select_list.checkbox > li {margin-right:4.5px}
-.reservation .select_list:not(.swiper-wrapper) > li {width:calc(33.3% - 3px);margin-bottom:5px}
+.reservation .select_list:not(.swiper-wrapper) > li {width:calc(33.3% - 3px);margin-bottom:4.5px}
 .reservation .select_list:not(.swiper-wrapper) > li:nth-child(3n) {margin-right:0}
-.reservation .kind_list {display:block;margin-top:-5px;font-size:0}
-.reservation .kind_list > li {display:inline-block;border-radius:30px;font-size:12px;width:calc(25% - 6px);margin:0 0 0 8px;line-height:32px;height:32px;vertical-align:top;text-align:center;position: relative;margin-top:6px;}
-.reservation .kind_list > li:first-child {margin-left:0}
+.reservation .kind_list {margin-top:-5px;font-size:0}
+.reservation .kind_list > li {display:inline-block;border-radius:30px;font-size:12px;line-height:32px;height:32px;vertical-align:top;text-align:center;position: relative;margin-top:6px;}
 .reservation .kind_list > li.etc {width:100%;margin-top:10px;margin-left:0}
 .reservation .kind_list > li.etc span {display:inline-block;font-size:12px;width:80px;line-height:32px;height:32px;vertical-align:top;text-align:center;font-weight:500;position: absolute;left:0;z-index:5;background:#fff;border-radius:30px;color:#707070}
 .reservation .kind_list > li.etc input[type="text"] {border:0;position:absolute;left:0;top:0;width:100%;padding-left:88px;height:32px;line-height:32px;background:rgb(235,235,235);border-radius:30px;letter-spacing:-0.5px;outline:none;}

@@ -366,20 +366,7 @@
             // 시간 슬라이드
             var timeSwiper = new Swiper(".hospital_02 .select_list_wrap", {
                 slidesPerView: "auto",
-            });
-
-            // 선택 활성화
-            $(document).on('click', '.select_list > li', function() {
-                var $this = $(this);
-                if(!$this.hasClass('disable')) {
-                    if($this.parents('.select_list').hasClass('checkbox')) {
-                        $this.toggleClass('active')
-                    }else {
-                        $this.parents('.select_list').children('li').removeClass('active');
-                        $this.addClass('active');
-                    }
-                }
-            })
+            });            
 
             // 선택항목 - 슬라이드
             $('.swiper-container').each(function(index, element) {
