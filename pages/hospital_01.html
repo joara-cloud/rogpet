@@ -7,6 +7,7 @@
 	<meta name="format-detection" content="telephone=no" />
 	<title>Rogpet - login</title>
 	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 </head>
@@ -21,9 +22,11 @@
 
 		<div id="container">
 			<div id="content" class="reservation_list hospital_01">
-                <div class="select_date">
-                    <img src="../assets/images/icon_calender.png" alt="">
-                    <p>날짜선택</p>
+                <div class="select_date_wrap">
+                    <a href="" class="select_date">
+                        <img src="../assets/images/icon_calender.png" alt="">
+                        <p>날짜선택</p>
+                    </a>
                 </div>
                 <div class="map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.8700812902907!2d127.05867176558732!3d37.51098223506492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca536e4738c97%3A0x336c7537649c9fe4!2z7L2U7JeR7Iqk!5e0!3m2!1sko!2skr!4v1632063100270!5m2!1sko!2skr" height="195" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -144,8 +147,78 @@
 		</footer>
 	</div>
 
+    <!-- 공통 팝업 -->
+	<div class="layer_popup layer_mypage02">
+		<div class="popup">
+			<h5 class="popup_header">
+				<a href="" class="btn_close">&times;</a>
+			</h5>
+			<div class="popup_content">
+
+                <!-- 기간검색 -->
+                <div class="period_form">
+                    <form action="">
+                        <input type="text" id="datepickerFrom" name="from" autocomplete="off" readonly>
+                        <span>~</span>
+                        <input type="text" id="datepickerTo" name="to" autocomplete="off" readonly>
+                        <div class="btn_wrap">
+                            <button type="submit" class="btn_ty02">조회하기</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- // 기간검색 -->
+
+            </div>
+		</div>
+        <div class="layer_popup_dim"></div>
+	</div>
+	<!-- // 공통 팝업 -->
+
     <script src="../assets/js/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
 	<script src="../assets/js/common.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+    $(document).ready(function() {
+        // 공통 팝업: 기간검색
+        $('.hospital_01 .select_date').click(function(e) {
+            e.preventDefault();
+
+            console.log('sjdfio');
+            $('.layer_mypage02').show().addClass('lp_period');
+        });
+
+        // 기간검색
+        $( "#datepickerFrom" ).datepicker({
+            showOn: "button",
+            buttonImage: "../assets/images/calendar@2x.png",
+            buttonImageOnly: true,
+            buttonText: "Select date",
+            monthNames: ['/ 1', '/ 2', '/ 3', '/ 4', '/ 5', '/ 6', '/ 7', '/ 8', '/ 9', '/ 10', '/ 11', '/ 12'],
+            monthNamesShort: ['/ 1','/ 2','/ 3','/ 4','/ 5','/ 6','/ 7','/ 8','/ 9','/ 10','/ 11','/ 12'],
+            dayNames: ["일", "월", "화", "수", "목", "금", "토"],
+            dayNamesShort: ["일", "월", "화", "수", "목", "금", "토"],
+            dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+            dateFormat: 'yy.mm.dd',
+            minDate : 0,
+            showMonthAfterYear: true,
+        });
+        $( "#datepickerTo" ).datepicker({
+            showOn: "button",
+            buttonImage: "../assets/images/calendar@2x.png",
+            buttonImageOnly: true,
+            buttonText: "Select date",
+            monthNames: ['/ 1', '/ 2', '/ 3', '/ 4', '/ 5', '/ 6', '/ 7', '/ 8', '/ 9', '/ 10', '/ 11', '/ 12'],
+            monthNamesShort: ['/ 1','/ 2','/ 3','/ 4','/ 5','/ 6','/ 7','/ 8','/ 9','/ 10','/ 11','/ 12'],
+            dayNames: ["일", "월", "화", "수", "목", "금", "토"],
+            dayNamesShort: ["일", "월", "화", "수", "목", "금", "토"],
+            dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+            dateFormat: 'yy.mm.dd',
+            minDate : 0,
+            showMonthAfterYear: true,
+        });
+    })
+    </script>
 
 </body>
 </html>

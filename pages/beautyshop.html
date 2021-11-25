@@ -221,12 +221,6 @@
               <dd>130,000원</dd>
             </dl>
           </div>
-          <div class="notice_wrap">
-            <h5>주의사항이 있나요?</h5>
-            <p>우리 아가가 다른 친구들한테 물려도 가만히 있어서 놀이시간에
-              잘 봐주세요 꼭 부탁드려요. <br>
-              다른 곳에서 놀이시간에 물려서 피가 났었거든요.</p>
-          </div>
           <div class="agree_wrap">
             <div class="box">
               <div class="check_ty02">
@@ -335,19 +329,6 @@
       var timeSwiper = new Swiper(".beautyshop .select_list_wrap", {
         slidesPerView: "auto",
       });
-
-      // 선택 활성화
-      $(document).on('click', '.select_list > li', function () {
-        var $this = $(this);
-        if (!$this.hasClass('disable')) {
-          if ($this.parents('.select_list').hasClass('checkbox')) {
-            $this.toggleClass('active')
-          } else {
-            $this.parents('.select_list').children('li').removeClass('active');
-            $this.addClass('active');
-          }
-        }
-      })
 
       // 선택항목 - 슬라이드
       $('.swiper-container').each(function (index, element) {
