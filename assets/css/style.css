@@ -29,10 +29,10 @@ body {background:#f5f5f5;}
 /* (공통) TAB */
 .tab_ty01 {display:flex;justify-content:center}
 /* .tab_ty01 > * {width:auto;padding:4px 16px 5px;border-radius:52px;border:1px solid rgb(181,181,181);font-size:10px;font-weight:300;} */
-.tab_ty01 > * {min-width:60px;margin-left:9px;padding:4px 0 5px;border-radius:52px;border:1px solid rgb(181,181,181);font-size:10px;font-weight:300;text-align:center;}
+.tab_ty01 > * {min-width:74px;margin-left:9px;padding:4px 0 5px;border-radius:52px;border:1px solid rgb(181,181,181);font-size:15px;font-weight:300;text-align:center;}
 .tab_ty01 > *:first-child {margin-left:0}
 .tab_ty01 > *.active {border-color:rgba(255,229,209,0.47);background-color: rgba(255,229,209,0.47);font-weight:600;}
-.tab_ty01 > * a {font:inherit}
+.tab_ty01 > * a {display:block;font:inherit}
 
 /* 로그아웃 */
 .btn_logout {margin:10px 0 0;text-align:right;}
@@ -404,7 +404,6 @@ input[type="checkbox"] {display: none;}
 .mypage02 .tab .more {display:block;width:100%;margin:10px 0 0;padding:10px 0;text-align:center;font-size:15px;color:#707070}
 .mypage02 .tab .more img {width:16px;}
 .mypage02 .btn_logout {margin:50px 0 0}
-.mypage02 .period {margin:0 0 30px}
 .mypage02 .btn_review {width:35%;color:#B5B5B5;font-weight:600;font-size:14px;text-align:right;}
 .layer_mypage02 .popup {padding:20px}
 .layer_mypage02 .popup .btn_close {font-size:20px}
@@ -420,6 +419,12 @@ input[type="checkbox"] {display: none;}
 .layer_mypage02.lp_period .popup_content .period_form .btn_wrap {padding:20px 0 0}
 .layer_mypage02.lp_review .popup_content .star_wrap {display:block;text-align:center;}
 .layer_mypage02.lp_review .popup_content .star_wrap h4 {margin:0 0 10px;font-size:12px;font-weight:500;}
+
+/* 공통 : mypage02, mypage09 */
+.mypage02 .period .swiper-container {margin:0 0 30px}
+.mypage02 .period .swiper-wrapper {justify-content:flex-start;}
+.mypage02 .period .swiper-slide {width:74px}
+.mypage02 .period .swiper-slide:last-child {margin-right:30px;}
 
 /* 나의상담내역 */
 .mypage09 .tab .list > li .date {font-weight:400;}
@@ -459,7 +464,7 @@ input[type="checkbox"] {display: none;}
 .login .line span {background-color:#fff;font-size:12px;color:rgb(112,112,112);width:43px;height:23px;line-height:23px;border-radius:10px;display:inline-block;position:relative;z-index:10;font-weight:700;}
 .login .sns_login {padding:0 0 40px}
 .login .sns_login > li {margin:0 0 10px;text-align:center;border-radius:5px;}
-.login .sns_login > li > a {height:48px;font-size:12px;font-weight:600;color:#fff;line-height:48px;}
+.login .sns_login > li > a {display:block;height:48px;font-size:14px;font-weight:500;color:#fff;line-height:48px;}
 .login .sns_login > li img {margin-right:10px}
 .login .sns_login > li.rogpet {background-color:#fd9647;}
 .login .sns_login > li.rogpet img {width:14px}
@@ -758,7 +763,8 @@ input[type="checkbox"] {display: none;}
 /* 호텔예약화면 - 예약 완료 */
 .reservation_complete {display:flex;align-items:center;justify-content:center;height:calc(100vh - 150px);flex-direction:column}
 .reservation_complete h3 {margin:0 0 35px;font-size:20px;color:#707070}
-.reservation_complete .btn_ty01 {display:block;width:145px;margin:0 auto 12px;font-weight:500;}
+.reservation_complete .btn_ty01 {display:block;width:200px;height:40px;margin:0 auto 12px;font-weight:500;font-size:17px;line-height:40px;}
+.reservation_complete#content > h3 {font-size:23px;}
 
 /* 충전금액 */
 .layer_price .price_form input[type="text"] {width:calc(100% - 40px);padding:8px;border:0;border-bottom:1px solid #000;border-radius:0;}

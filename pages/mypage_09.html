@@ -9,6 +9,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+    .<link rel="stylesheet" type="text/css" href="../assets/css/swiper.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 </head>
@@ -29,13 +30,15 @@
                     상담 확정 된 건이 <span>2회</span> 있습니다.
                 </h3>
                 <div class="period">
-                    <ul class="tab_ty01">
-                        <li class="active"><a href="">전체</a></li>
-                        <li class=""><a href="">1주일</a></li>
-                        <li class=""><a href="">1개월</a></li>
-                        <li class=""><a href="">6개월</a></li>
-                        <li class="custom"><a href="">기간검색</a></li>
-                    </ul>
+                    <div class="swiper-container">
+                        <ul class="swiper-wrapper tab_ty01">
+                            <li class="swiper-slide active"><a href="">전체</a></li>
+                            <li class="swiper-slide "><a href="">1주일</a></li>
+                            <li class="swiper-slide "><a href="">1개월</a></li>
+                            <li class="swiper-slide "><a href="">6개월</a></li>
+                            <li class="swiper-slide custom"><a href="">기간검색</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <ul class="tab">
                     <li class="active">
@@ -127,6 +130,7 @@
     <script src="../assets/js/jquery.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script src="../assets/js/swiper.js"></script>
     <script src="../assets/js/common.js"></script>
     <script>
         $(document).ready(function() {
@@ -174,6 +178,10 @@
                 minDate : 0,
                 showMonthAfterYear: true,
             });
+            
+            var swiper = new Swiper('.period .swiper-container', {
+                slidesPerView: "auto",
+            }) 
         })
     </script>
 
