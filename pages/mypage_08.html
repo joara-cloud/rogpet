@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no" />
+	<title>Rogpet - center</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../assets/css/swiper.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+</head>
+
+<body>
+
+	<div id="wrap">
+		<header id="header">
+			<div class="btn_back"><img src="../assets/images/arrow-left-gray@2x.png" alt="뒤로가기"></div>
+			<h1>계좌 연동하기</h1>
+			<a href="" class="btn_my"><img src="../assets/images/top_menu.png" alt="mall"></a>
+		</header>
+
+		<div id="container">
+			<div id="content" class="mypage_ mypage_account">
+				<div class="c_inner">
+					<ul class="list_ty02 card_list">
+						<li>
+							<div class="panel_tit">
+								<strong>KB은행(7894) <span class="icon_ty01 gray">메인계좌</span> </strong>
+								<span class="right">연결됨<button type="button" class="more"><img src="../assets/images/chevron_right_24px@2x.png" alt="더보기"></button></span>
+							</div>
+							<div class="panel">
+								<div class="row">
+									<p>1234-XXXX-XXXX-8769</p>
+									<a href="" class="del">삭제하기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="panel_tit">
+								<strong>카카오뱅크(5563)</strong>
+								<span class="right">연결됨<button type="button" class="more"><img src="../assets/images/chevron_right_24px@2x.png" alt="더보기"></button></span>
+							</div>
+							<div class="panel">
+								<div class="row">
+									<p>1234-XXXX-XXXX-8769</p>
+									<a href="" class="del">삭제하기</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<a href="" class="add">+ 새로운 계좌 추가하기</a>
+					<div class="btn_logout">
+						<a href="">로그아웃</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer id="bottomMenu">
+			<ul class="category">
+				<li class="active"><a href="">진료예약</a></li>
+				<li><a href="">펫상담실</a></li>
+				<li><a href="">펫스타그램</a></li>
+				<li><a href="">Pet Mall</a></li>
+				<li><a href="">Mypage</a></li>
+			</ul>
+		</footer>
+	</div>
+
+	<script src="../assets/js/jquery.js"></script>
+	<script src="../assets/js/swiper.js"></script>
+	<script src="../assets/js/common.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.mypage_account .card_list > li').click(function() {
+				$(this).toggleClass('open')
+			})
+		})
+	</script>
+
+</body>
+
+</html>

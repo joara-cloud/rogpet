@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<title>Rogpet - login</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+</head>
+<body>
+
+	<div id="wrap">
+		<header id="header">
+			<div class="btn_back"><img src="../assets/images/arrow-left-gray@2x.png" alt="뒤로가기"></div>
+			<h1>나의 상담내역</h1>
+			<a href="" class="btn_my"><img src="../assets/images/top_menu.png" alt="mall"></a>
+		</header>
+
+
+		<div id="container">
+			<div id="content" class="mypage02 counhistory">
+                <h3>
+                    댕댕이님,<br>
+                    상담 확정 된 건이 <span>2회</span> 있습니다.
+                </h3>
+                <div class="period">
+                    <ul class="tab_ty01">
+                        <li class="active"><a href="">전체</a></li>
+                        <li class=""><a href="">1주일</a></li>
+                        <li class=""><a href="">1개월</a></li>
+                        <li class=""><a href="">6개월</a></li>
+                        <li class="custom"><a href="">기간검색</a></li>
+                    </ul>
+                </div>
+                <ul class="tab">
+                    <li class="active">
+                        <h4><span>영상상담</span></h4>
+                        <div class="panel">
+                            <ul class="list">
+                                <li class="strong">
+                                    <span class="cate">대기</span>
+                                    <span class="place">스마트 동물 병원</span>
+                                    <span class="date">09.07 14:00</span>
+                                </li>
+                                <li>
+                                    <span class="cate">확정</span>
+                                    <span class="place">스마트 동물 병원</span>
+                                    <span class="date">09.07 14:00</span>
+                                </li>
+                                <li>
+                                    <span class="cate">완료</span>
+                                    <span class="place">스마트 동물 병원</span>
+                                    <span class="date">09.07 14:00</span>
+                                </li>
+                                <li></li>
+                            </ul>
+                            <button type="button" class="more">더보기<img src="../assets/images/arrow_down@2x.png" alt=""> </button>
+                        </div>
+                    </li>
+                    <li>
+                        <h4><span>1:1상담</span></h4>
+                        <div class="panel">
+                            <ul class="list">
+                                <li class="strong">
+                                    <span class="cate">미용</span>
+                                    <span class="place">스마트 동물 병원</span>
+                                    <span class="date">09.17 03:00</span>
+                                </li>
+                                <li>
+                                    <span class="cate">미용</span>
+                                    <span class="place">스마트 동물 병원</span>
+                                    <span class="date">09.23 20:00</span>
+                                </li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <button type="button" class="more">더보기<img src="../assets/images/arrow_down@2x.png" alt=""> </button>
+
+                        </div>
+                    </li>
+                </ul>
+                <div class="btn_logout">
+                    <a href="">로그아웃</a>
+                </div>
+			</div>
+		</div>
+
+		<footer id="bottomMenu">
+			<ul class="category">
+				<li class="active"><a href="">진료예약</a></li>
+				<li><a href="">펫상담실</a></li>
+				<li><a href="">펫스타그램</a></li>
+				<li><a href="">Pet Mall</a></li>
+				<li><a href="">Mypage</a></li>
+			</ul>
+		</footer>
+	</div>
+
+    <!-- 기간 검색 -->
+	<div class="layer_popup layer_mypage02 lp_period">
+		<div class="popup">
+			<h5 class="popup_header">
+				<a href="" class="btn_close">&times;</a>
+			</h5>
+			<div class="popup_content">
+                <div class="period_form">
+                    <form action="">
+                        <input type="text" id="datepickerFrom" name="from" autocomplete="off" readonly>
+                        <span>~</span>
+                        <input type="text" id="datepickerTo" name="to" autocomplete="off" readonly>
+                        <div class="btn_wrap">
+                            <button type="submit" class="btn_ty02">조회하기</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+		</div>
+        <div class="layer_popup_dim"></div>
+	</div>
+	<!-- // 기간 검색 -->
+
+    <script src="../assets/js/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.tab h4').click(function() {
+                var idx = $(this).parent().index();
+                $('.tab > li').removeClass('active');
+                $('.tab > li').eq(idx).addClass('active');
+            })
+
+            // 기간설정 레이어팝업
+            $('.mypage02 .period .custom').click(function(e) {
+                e.preventDefault();
+
+                $('.mypage02 .period .tab_ty01 > li').removeClass('active');
+                $(this).addClass('active')
+                $('.layer_mypage02').show();
+            });
+
+            // 기간설정
+            $( "#datepickerFrom" ).datepicker({
+                showOn: "button",
+                buttonImage: "../assets/images/calendar@2x.png",
+                buttonImageOnly: true,
+                buttonText: "Select date",
+                monthNames: ['/ 1', '/ 2', '/ 3', '/ 4', '/ 5', '/ 6', '/ 7', '/ 8', '/ 9', '/ 10', '/ 11', '/ 12'],
+                monthNamesShort: ['/ 1','/ 2','/ 3','/ 4','/ 5','/ 6','/ 7','/ 8','/ 9','/ 10','/ 11','/ 12'],
+                dayNames: ["일", "월", "화", "수", "목", "금", "토"],
+                dayNamesShort: ["일", "월", "화", "수", "목", "금", "토"],
+                dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+                dateFormat: 'yy.mm.dd',
+                minDate : 0,
+                showMonthAfterYear: true,
+            });
+            $( "#datepickerTo" ).datepicker({
+                showOn: "button",
+                buttonImage: "../assets/images/calendar@2x.png",
+                buttonImageOnly: true,
+                buttonText: "Select date",
+                monthNames: ['/ 1', '/ 2', '/ 3', '/ 4', '/ 5', '/ 6', '/ 7', '/ 8', '/ 9', '/ 10', '/ 11', '/ 12'],
+                monthNamesShort: ['/ 1','/ 2','/ 3','/ 4','/ 5','/ 6','/ 7','/ 8','/ 9','/ 10','/ 11','/ 12'],
+                dayNames: ["일", "월", "화", "수", "목", "금", "토"],
+                dayNamesShort: ["일", "월", "화", "수", "목", "금", "토"],
+                dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+                dateFormat: 'yy.mm.dd',
+                minDate : 0,
+                showMonthAfterYear: true,
+            });
+        })
+    </script>
+
+</body>
+</html>

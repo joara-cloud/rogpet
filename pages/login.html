@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no" />
+	<title>Rogpet - login</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+</head>
+
+<body>
+
+	<div id="wrap">
+		<header id="header">
+			<div id="hamburger" class="ham_btn"><span></span><span></span><span></span></div>
+			<h1 class="logo"><a href=""><img src="../assets/images/logo.png" alt="logo"></a></h1>
+			<a href="" class="btn_my"><img src="../assets/images/top_menu.png" alt="mall"></a>
+		</header>
+
+		<div id="container">
+			<div id="content" class="login">
+				<h3>로그인</h3>
+				<div class="form_wrap">
+					<form action="" class="form_ty01">
+						<div class="row">
+							<label for="">ID</label>
+							<input type="text">
+						</div>
+						<div class="row pw">
+							<label for="">Password</label>
+							<div class="pw_input">
+								<input type="password">
+								<span class="showhide"></span>
+							</div>
+						</div>
+						<button type="submit">LOG IN</button>
+					</form>
+				</div>
+				<div class="line"><span>OR</span></div>
+				<ul class="sns_login">
+					<li class="rogpet"><a href=""><img src="../assets/images/ico_rogpet@2x.png" alt="">로그펫 일반회원 가입</a></li>
+					<li class="kakao"><a href=""><img src="../assets/images/ico_kakao@2x.png" alt="">카카오 아이디로 가입</a></li>
+					<li class="naver"><a href=""><img src="../assets/images/ico_naver@2x.png" alt="">네이버 아이디로 가입</a></li>
+					<li class="facebook"><a href=""><img src="../assets/images/ico_facebook@2x.png" alt="">페이스북 아이디로 가입</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<footer id="bottomMenu">
+			<ul class="category">
+				<li class="active"><a href="">진료예약</a></li>
+				<li><a href="">펫상담실</a></li>
+				<li><a href="">펫스타그램</a></li>
+				<li><a href="">Pet Mall</a></li>
+				<li><a href="">Mypage</a></li>
+			</ul>
+		</footer>
+	</div>
+
+	<script src="../assets/js/jquery.js"></script>
+	<script src="../assets/js/common.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.login .showhide').click(function () {
+				if ($(this).hasClass('hide')) {
+					$(this).removeClass('hide')
+					$('.login .pw_input input').attr('type', 'password');
+				} else {
+					$(this).addClass('hide')
+					$('.login .pw_input input').attr('type', 'text');
+				}
+			})
+		})
+	</script>
+
+</body>
+
+</html>
