@@ -23,7 +23,7 @@ body {background:#f5f5f5;}
 /* (공통) */
 .dl_wrap dl {display:flex;margin-top:15px;align-items:flex-start;}
 .dl_wrap dl:first-child {margin-top:0}
-.dl_wrap dt {width:80px;min-width:80px;color:#b6b6b6;font-size:12px}
+.dl_wrap dt {min-width:85px;color:#b6b6b6;font-size:12px}
 .dl_wrap dd {color:#6f7070;flex:1;font-size:12px;font-weight:500;line-height:1.45;}
 
 /* (공통) TAB */
@@ -117,9 +117,9 @@ body {background:#f5f5f5;}
 .check_ty02 input[type="checkbox"]:checked + label:before, .check_ty02 input[type="radio"]:checked + label:before {border-color:#fd9647;background:#fd9647 url(../images/check.png) no-repeat;background-size:cover;}
 
 /* (공통)select */
-.select_ty01 {display:inline-block;position:relative;padding-right:8px;line-height:1}
-.select_ty01:after {display:inline-block;right:0;top:50%;width:10px;height:5px;background:url(../images/icon_select.png) no-repeat 50% 50% / 10px;vertical-align:middle;content:'';}
-.select_ty01 select {-moz-appearance:none;-webkit-appearance:none;appearance:none;border:0;color:rgb(182,182,182);background-color:transparent;}
+.select_ty01 {display:inline-block;position:relative;min-width:55px;line-height:1}
+.select_ty01:after {display:inline-block;position:absolute;right:0;top:50%;width:10px;height:5px;background:url(../images/icon_select.png) no-repeat 50% 50% / 10px;vertical-align:middle;content:'';transform:translateY(-50%);}
+.select_ty01 select {padding-right:14px;-moz-appearance:none;-webkit-appearance:none;appearance:none;border:0;color:rgb(182,182,182);background-color:transparent;font-size:13px;}
 .select_ty01 select::-ms-expand {display:none}
 .custom-select {position: relative;font-size:12px;color:#c4c4c4}
 .custom-select select {display: none;}
@@ -285,9 +285,10 @@ input[type="checkbox"] {display: none;}
 .layer_reserve .sub_title {height:27px;border-radius:14px;line-height:27px;font-size:14px;color:#fff;text-align:center;background-color:rgba(133,188,157,0.58)}
 .layer_reserve .agree_wrap {margin:0 0 25px}
 .layer_reserve .box {display:flex;position:relative;padding:10px 14px;border-radius:10px;background-color:rgb(247,247,248);align-items:center;justify-content:space-between;}
-.layer_reserve .box span {font-size:12px;color:#b6b6b6}
-.layer_reserve .box strong {color:#707070;font-size:15px;}
-.layer_reserve .text {overflow:scroll;height:80px;margin:5px 0 20px;padding:14px;font-size:12px;color:#707070}
+.layer_reserve .box span {font-size:13px;color:#b6b6b6}
+.layer_reserve .box strong {color:#000;font-size:15px;}
+.layer_reserve .text {overflow:scroll;height:80px;margin:5px 0 20px;padding:14px;font-size:14px;color:#707070}
+.layer_reserve .agree_wrap .box {border-radius:0;}
 .layer_reserve .agree_wrap .box label {color:#707070;font-weight:bold;font-size:14px;}
 .layer_reserve .terms_list {padding:5px 0}
 .layer_reserve .terms_list > li {display:flex;position:relative;margin:10px 0;padding:0 14px;color:#b5b5b5;font-size:12px;align-items:center;justify-content:space-between;}
@@ -303,16 +304,16 @@ input[type="checkbox"] {display: none;}
 .layer_reserve .box_wrap .box {flex-direction:column;align-items:flex-start;}
 .layer_reserve .box_wrap .box span {display:block;margin:0 0 2px;font-size:11px;}
 .layer_reserve .box_wrap .box strong {font-size:15px;}
-.layer_reserve .dl_wrap {margin:30px 0}
+.layer_reserve .dl_wrap {margin:30px 0;padding:0 14px}
 .layer_reserve .dl_wrap dl {margin-top:8px}
-.layer_reserve .dl_wrap dt {width:75%}
+.layer_reserve .dl_wrap dt {width:75%;font-size:13px}
 .layer_reserve .dl_wrap dt a {text-decoration:underline;color:#b6b6b6}
 .layer_reserve .dl_wrap dt strong {color:#707070;font-weight:500;}
-.layer_reserve .dl_wrap dt p {color:#707070;font-size:12px;}
-.layer_reserve .dl_wrap dd {width:25%;text-align:right;}
+.layer_reserve .dl_wrap dt p {color:#707070;font-size:15px;}
+.layer_reserve .dl_wrap dd {width:25%;text-align:right;font-size:15px}
 .layer_reserve .notice_wrap {margin:0 0 20px}
-.layer_reserve .notice_wrap h5 {font-size:16px;color:#ACACAC;font-weight:600;}
-.layer_reserve .notice_wrap p {padding:10px;font-size:12px;color:#6F7070}
+.layer_reserve .notice_wrap h5 {font-size:16px;color:#6F6E6F;font-weight:600;}
+.layer_reserve .notice_wrap p {padding:10px;font-size:13px;color:#B6B6B6}
 
 /* (공통)메뉴 */
 .menu_list {display:flex;flex-wrap:wrap}
@@ -537,7 +538,7 @@ input[type="checkbox"] {display: none;}
 .reservation_list .hospital_list .thumb img {width:100%}
 .reservation_list .hospital_list .info {padding-right:14px;flex:1}
 .reservation_list .hospital_list .info h5 {color:rgb(112,112,112);font-size:17px;padding:3px 0 0;font-weight:600;}
-.reservation_list .hospital_list .info p {color:rgb(182,182,182);font-size:10px}
+.reservation_list .hospital_list .info p {padding:3px 0 0;color:rgb(182,182,182);font-size:13px}
 .reservation_list .hospital_list .info strong {color:rgb(182,182,182);font-size:11px;font-weight:600}
 
 /* (공통)진료예약화면, 호텔예약화면 */
@@ -552,10 +553,10 @@ input[type="checkbox"] {display: none;}
 .reservation .title_area h4 {color:rgb(112,112,112);font-size:24px;font-weight:600;}
 .reservation .title_area p {color:rgb(112,112,112);font-size:13px;padding:2px 0 0}
 .reservation .calender .month {display:block;margin:0 0 10px;padding:0 3.5%;font-size:25px;color:rgb(112,112,112);letter-spacing:-1px;}
-.reservation h5 {position:relative;font-size:15px;color:rgb(112,112,112);margin:0 0 10px}
+.reservation h5 {position:relative;font-size:16px;color:rgb(112,112,112);margin:0 0 10px}
 .reservation .calender .month_area {position:relative;}
 .reservation .calender .month_area p,
-.reservation h5 p {position:absolute;right:0;top:50%;font-size:10px;color:rgb(182,182,182);margin:0 0 0 30px;display:inline-block;font-weight:300;transform:translateY(-50%);}
+.reservation h5 p {position:absolute;right:0;top:50%;font-size:11px;color:rgb(182,182,182);margin:0 0 0 30px;display:inline-block;font-weight:300;transform:translateY(-50%);}
 .reservation .btn_reservation {font-size:14px;line-height:35px;height:35px;font-weight: 500;margin:25px auto 0;width:70%;display:block;}
 .reservation .sticky_area {min-height:100vh;}
 .reservation .sticky_area .title_area {position:sticky;top:0;left:0;z-index:10;background-color:#fff;}
@@ -594,20 +595,21 @@ input[type="checkbox"] {display: none;}
 .reservation .inner {margin:30px 5%}
 .reservation .select_list {font-size:0;margin:15px 0 0;display:flex;flex-wrap:wrap;}
 .reservation .select_list.swiper-wrapper {flex-wrap:nowrap;}
-.reservation .select_list > li {display:inline-block;font-size:12px;width:90px;border-radius:30px;line-height:32px;height:32px;vertical-align:top;text-align:center;color:#ddd;font-weight:bold;}
+.reservation .select_list > li {display:inline-block;font-size:12px;width:90px;border-radius:30px;line-height:32px;height:32px;vertical-align:top;text-align:center;color:#ddd;font-weight:500;font-size:15px;}
 .reservation .select_list > li:not(.disable) {color:#707070}
 .reservation .select_list > li.active {color:#fff;background-color:rgb(133,188,157);}
+.reservation .select_list > li.swiper-slide {margin-right:5px}
 .reservation .select_list.checkbox > li {margin-right:4.5px}
 .reservation .select_list:not(.swiper-wrapper) > li {width:calc(33.3% - 3px);margin-bottom:4.5px}
 .reservation .select_list:not(.swiper-wrapper) > li:nth-child(3n) {margin-right:0}
 .reservation .kind_list {margin-top:-5px;font-size:0}
-.reservation .kind_list > li {display:inline-block;border-radius:30px;font-size:12px;line-height:32px;height:32px;vertical-align:top;text-align:center;position: relative;margin-top:6px;}
+.reservation .kind_list > li {display:inline-block;border-radius:30px;line-height:32px;height:32px;vertical-align:top;text-align:center;position: relative;margin-top:6px;}
 .reservation .kind_list > li.etc {width:100%;margin-top:10px;margin-left:0}
 .reservation .kind_list > li.etc span {display:inline-block;font-size:12px;width:80px;line-height:32px;height:32px;vertical-align:top;text-align:center;font-weight:500;position: absolute;left:0;z-index:5;background:#fff;border-radius:30px;color:#707070}
 .reservation .kind_list > li.etc input[type="text"] {border:0;position:absolute;left:0;top:0;width:100%;padding-left:88px;height:32px;line-height:32px;background:rgb(235,235,235);border-radius:30px;letter-spacing:-0.5px;outline:none;}
 .reservation .kind_list > li.etc input[type="text"]::placeholder {color:rgb(182,182,182)}
 .reservation .kind_list > li.active,
-.reservation .kind_list > li.active > span {display:inline-block;background:rgba(133,188,157);color:#fff !important;font-size:12px;}
+.reservation .kind_list > li.active > span {display:inline-block;background:rgba(133,188,157);color:#fff !important;}
 .reservation .calender .days {text-align:center;font-size:0;margin:0 auto 10px}
 .reservation .calender .days span {display:inline-block;width:calc(100% / 7);font-size:11px;color:rgb(112,112,112);}
 .reservation .part {margin-top:30px}

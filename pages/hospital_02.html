@@ -46,36 +46,29 @@
                     <div class="inner">
                         <div class="part">
                             <h5>체중<p>* 체중에 따른 요금 차이가 없는 곳은 가려집니다.</p></h5>
-                            <div class="swiper-container">
-                                <ul class="swiper-wrapper select_list">
-                                    <li class="swiper-slide active"> ~ 5Kg</li>
-                                    <li class="swiper-slide">5 ~ 10Kg</li>
-                                    <li class="swiper-slide">10Kg ~</li>
-                                    <li class="swiper-slide">10Kg ~ 15kg</li>
-                                </ul>
-                            </div>
+                            <ul class="select_list checkbox">
+                                <li class=" active"> ~ 5Kg</li>
+                                <li class="">5 ~ 10Kg</li>
+                                <li class="">10Kg ~</li>
+                                <li class="">10Kg ~ 15kg</li>
+                            </ul>
                         </div>
                         <div class="part">
                             <h5>룸 컨디션<p>* 기준 Kg 수에 따라 추가요금 부가 됩니다.</p></h5>
-                            <div class="swiper-container">
-                                <ul class="swiper-wrapper select_list">
-                                    <li class="swiper-slide active">프리미엄</li>
-                                    <li class="swiper-slide disable">2견 1실</li>
-                                    <li class="swiper-slide">일반실</li>
-                                </ul>
-                            </div>
+                            <ul class="select_list">
+                                <li class=" active">프리미엄</li>
+                                <li class=" disable">2견 1실</li>
+                                <li class="">일반실</li>
+                            </ul>
                         </div>
                         <div class="part">
                             <h5>부가서비스<p>* 중복선택 가능합니다.</p></h5>
-                            <div class="swiper-container">
-                                <ul class="swiper-wrapper select_list checkbox">
-                                    <li class="swiper-slide active">위생미용</li>
-                                    <li class="swiper-slide">목욕</li>
-                                    <li class="swiper-slide">버블스파</li>
-                                    <li class="swiper-slide">단독산책</li>
-                                    <!-- <li class="etc input_ty01"><span>기타</span><input type="text" placeholder="갑자기 움직임이 둔하고, 먹지도 않아요."></li> -->
-                                </ul>
-                            </div>
+                            <ul class="select_list checkbox">
+                                <li class=" active">위생미용</li>
+                                <li class="">목욕</li>
+                                <li class="">버블스파</li>
+                                <li class="">단독산책</li>
+                            </ul>
                         </div>
                         <div class="calender part">
                             <div class="month_area">
@@ -244,19 +237,19 @@
                         <ul class="terms_list">
                             <li>
                                 <div class="check_ty02">
-                                    <input type="checkbox" id="chk1">
+                                    <input type="checkbox" name="chk" id="chk1">
                                     <label for="chk1">숙소 이용규칙 및 취소/환불규정 동의 (필수)</label>
                                 </div>
                             </li>
                             <li>
                                 <div class="check_ty02">
-                                    <input type="checkbox" id="chk2">
+                                    <input type="checkbox" name="chk" id="chk2">
                                     <label for="chk2">개인정보 수집 및 이용 동의 (필수)</label>
                                 </div>
                             </li>
                             <li>
                                 <div class="check_ty02">
-                                    <input type="checkbox" id="chk3">
+                                    <input type="checkbox" name="chk" id="chk3">
                                     <label for="chk3">개인정보 제 3자 제공 동의 (필수)</label>
                                 </div>
                             </li>
@@ -378,6 +371,16 @@
                 });
 
             })
+
+            // 전체선택
+            $('#chkAll').click(function () {
+                if ($(this).is(':checked')) {
+                    $('input[name="chk"]').prop('checked', true)
+                } else {
+                    $('input[name="chk"]').prop('checked', false)
+                }
+            });
+            
         })
     </script>
 </body>

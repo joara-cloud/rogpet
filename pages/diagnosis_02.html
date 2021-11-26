@@ -165,19 +165,19 @@
                         <ul class="terms_list">
                             <li>
                                 <div class="check_ty02">
-                                    <input type="checkbox" id="chk1">
+                                    <input type="checkbox" name="chk" id="chk1">
                                     <label for="chk1">숙소 이용규칙 및 취소/환불규정 동의 (필수)</label>
                                 </div>
                             </li>
                             <li>
                                 <div class="check_ty02">
-                                    <input type="checkbox" id="chk2">
+                                    <input type="checkbox" name="chk" id="chk2">
                                     <label for="chk2">개인정보 수집 및 이용 동의 (필수)</label>
                                 </div>
                             </li>
                             <li>
                                 <div class="check_ty02">
-                                    <input type="checkbox" id="chk3">
+                                    <input type="checkbox" name="chk" id="chk3">
                                     <label for="chk3">개인정보 제 3자 제공 동의 (필수)</label>
                                 </div>
                             </li>
@@ -280,6 +280,15 @@
             $(document).on('click', '.reservation .calender .swiper-slide', function() {
                 $('.reservation .calender .swiper-slide').removeClass('active')
                 $(this).addClass('active')
+            })
+
+            // 전체선택
+            $('#chkAll').click(function() {
+                if($(this).is(':checked')) {
+                    $('input[name="chk"]').prop('checked', true)
+                }else {
+                    $('input[name="chk"]').prop('checked', false)
+                }
             })
 
         })
